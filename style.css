@@ -1,0 +1,30 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.container {
+    text-align: center;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#answer {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#submit-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+#result {
+    font-weight: bold;
+}

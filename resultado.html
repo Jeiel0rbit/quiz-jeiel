@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Quiz Bíblico</title>
+    <link rel="stylesheet" href="resultado.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado do Quiz Bíblico</h1>
+        <div class="result">
+            <p>Parabéns! Você concluiu o quiz.</p>
+            <p>Você acertou <span id="correctAnswers"></span> de <span id="totalQuestions"></span> perguntas.</p>
+        </div>
+        <button class="btn" onclick="voltar()">Voltar</button>
+    </div>
+
+    <script>
+        // Extrair os parâmetros da URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const correctAnswers = urlParams.get('correctAnswers');
+        const totalQuestions = urlParams.get('totalQuestions');
+
+        // Atualizar o conteúdo da página com os resultados
+        document.getElementById('correctAnswers').textContent = correctAnswers;
+        document.getElementById('totalQuestions').textContent = totalQuestions;
+
+        // Função para voltar à página inicial
+        function voltar() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
