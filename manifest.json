@@ -1,10 +1,10 @@
 {
 "name": "Quiz Biblico",
 "short_name": "Quiz Biblico",
-"start_url": "/",
+"start_url": ".",
 "display": "standalone",
 "description": "Uma forma de você aprender mais da Bíblia Sagrada.",
-"lang": " pt",
+"lang": "pt",
 "dir": "auto",
 "theme_color": "#000000",
 "background_color": "#000000",
@@ -28,14 +28,14 @@
         "src": "icon.png",
         "sizes": "2880x1800",
         "type": "image/png",
-        "description": "Demonstração"
+        "description": "Demon"
     }
 ],
 "prefer_related_applications": false,
 "shortcuts": [
     {
         "name":"Quiz Biblico",
-        "url":"/",
+        "url":".",
         "description":"Uma forma de você aprender mais da Bíblia Sagrada."
     }
 ]
