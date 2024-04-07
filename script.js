@@ -39,9 +39,17 @@ let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let wrongAnswers = [];
 
-function getRandomQuestion() {
-    return questions[Math.floor(Math.random() * questions.length)];
+// Função para embaralhar um array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
+
+// Embaralhar as perguntas antes de exibi-las
+shuffleArray(questions);
 
 function displayQuestion() {
     const randomQuestion = questions[currentQuestionIndex];
