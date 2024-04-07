@@ -7,56 +7,56 @@
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-        console.log('ServiceWorker registrado com escopo: ', registration.scope);
-      }, function(err) {
-        console.log('Erro ao registrar o ServiceWorker: ', err);
-      });
-    });
-  }
-</script>
 <body>
   <!-- Caixa -->
   <div id="caixaDialogo" class="esconder">
     <span class="fechar" onclick="fecharDialogo()">&times;</span>
     <p>Criado por Jeiel Lima Miranda. Limpe o "cache" eventualmente para verificar atualizações. Contato: Jeiel@duck.com Tudo que precisa saber é sobre Jesus Cristo.</p>
-</div>
-<script>
-  // Verificar se o diálogo já foi fechado anteriormente
-  var dialogoFechado = localStorage.getItem('dialogoFechado');
-
-  function mostrarDialogo() {
+  </div>
+  <script>
     // Verificar se o diálogo já foi fechado anteriormente
-    if (!dialogoFechado) {
-      document.getElementById("caixaDialogo").style.display = "block";
-      setTimeout(function(){
-        fecharDialogo();
-      }, 7000); // 7000 milissegundos = 7 segundos
+    var dialogoFechado = localStorage.getItem('dialogoFechado');
+
+    function mostrarDialogo() {
+      // Verificar se o diálogo já foi fechado anteriormente
+      if (!dialogoFechado) {
+        document.getElementById("caixaDialogo").style.display = "block";
+        setTimeout(function(){
+          fecharDialogo();
+        }, 7000); // 7000 milissegundos = 7 segundos
+      }
     }
-  }
 
-  function fecharDialogo() {
-    document.getElementById("caixaDialogo").style.display = "none";
-    // Salvar o estado do diálogo como fechado no armazenamento local
-    localStorage.setItem('dialogoFechado', true);
-  }
+    function fecharDialogo() {
+      document.getElementById("caixaDialogo").style.display = "none";
+      // Salvar o estado do diálogo como fechado no armazenamento local
+      localStorage.setItem('dialogoFechado', true);
+    }
 
-  // Chamar a função para mostrar o diálogo
-  mostrarDialogo();
-</script>
+    // Chamar a função para mostrar o diálogo
+    mostrarDialogo();
+  </script>
   <!-- Caixa -->
-    <div class="container">
-        <h1>Quiz Bíblico</h1>
-        <div id="question-container">
-            <p id="question">Carregando...</p>
-            <div id="options"></div>
-            <button id="submit-btn">Enviar</button>
-        </div>
-        <p id="result"></p>
+  <div class="container">
+    <h1>Quiz Bíblico</h1>
+    <div id="question-container">
+      <p id="question">Carregando...</p>
+      <div id="options"></div>
+      <button id="submit-btn">Enviar</button>
     </div>
-    <script src="script.js"></script>
+    <p id="result"></p>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          console.log('ServiceWorker registrado com escopo: ', registration.scope);
+        }, function(err) {
+          console.log('Erro ao registrar o ServiceWorker: ', err);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
