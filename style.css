@@ -32,3 +32,36 @@ body, html {
 #result {
     font-weight: bold;
 }
+/* Caixa */
+
+#caixaDialogo {
+    display: none;
+    position: auto;
+    bottom: 30px;
+    right: 30px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    animation: aparecer 1.0s ease;
+  }
+  
+  @keyframes aparecer {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  .fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .fechar:hover,
+  .fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
