@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Bíblico</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
 </head>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        console.log('ServiceWorker registrado com escopo: ', registration.scope);
+      }, function(err) {
+        console.log('Erro ao registrar o ServiceWorker: ', err);
+      });
+    });
+  }
+</script>
 <body>
     <div class="container">
         <h1>Quiz Bíblico</h1>
         <div id="question-container">
             <p id="question">Carregando...</p>
-            <input type="text" id="answer" placeholder="Sua resposta...">
+            <div id="options"></div>
             <button id="submit-btn">Enviar</button>
         </div>
         <p id="result"></p>

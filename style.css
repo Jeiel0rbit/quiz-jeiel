@@ -15,9 +15,13 @@ body, html {
     margin-bottom: 20px;
 }
 
-#answer {
+#options {
     margin-top: 10px;
-    padding: 5px;
+    text-align: left;
+}
+
+#options input[type="radio"] {
+    margin-right: 5px;
 }
 
 #submit-btn {
