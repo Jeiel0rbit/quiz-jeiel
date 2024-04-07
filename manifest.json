@@ -4,7 +4,7 @@
 "start_url": "/index.html",
 "display": "standalone",
 "description": "Uma forma de você aprender mais da Bíblia Sagrada.",
-"lang": "pt",
+"lang": "Portuguese",
 "dir": "auto",
 "theme_color": "#000000",
 "background_color": "#000000",
@@ -35,7 +35,7 @@
 "shortcuts": [
     {
         "name":"Quiz Biblico",
-        "url":".",
+        "url":"/index.html",
         "description":"Uma forma de você aprender mais da Bíblia Sagrada."
     }
 ]
