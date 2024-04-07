@@ -1,35 +1,42 @@
 {
-  "name": "Quiz Bíblico",
-  "short_name": "Quiz",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#0175C2",
-  "theme_color": "#0175C2",
-  "description": "Um quiz bíblico para testar seus conhecimentos sobre a Bíblia.ap",
-  "orientation": "portrait-primary",
-  "prefer_related_applications": false,
-  "icons": [
+"name": "Quiz Biblico",
+"short_name": "Quiz Biblico",
+"start_url": "The URL that should be loaded when your application is opened",
+"display": "standalone",
+"description": "Uma forma de você aprender mais da Bíblia Sagrada.",
+"lang": " pt-br",
+"dir": "auto",
+"theme_color": "#000000",
+"background_color": "#000000",
+"orientation": "any",
+"icons": [
     {
-      "src": "icon.png",
-      "sizes": "192x192",
-      "type": "image/png"
+        "src": "icon.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
     },
     {
-      "src": "icon.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "icon.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "icon.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+        "src": "icon.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
     }
-  ]
+],
+"screenshots": [
+    {
+        "src": "icon.png",
+        "sizes": "2880x1800",
+        "type": "image/png",
+        "description": "Demonstração"
+    }
+],
+"prefer_related_applications": false,
+"shortcuts": [
+    {
+        "name":"Quiz Biblico",
+        "url":"/",
+        "description":"Uma forma de você aprender mais da Bíblia Sagrada."
+    }
+]
 }
