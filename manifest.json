@@ -1,7 +1,7 @@
 {
 "name": "Quiz Biblico",
 "short_name": "Quiz Biblico",
-"start_url": ".",
+"start_url": "/index.html",
 "display": "standalone",
 "description": "Uma forma de você aprender mais da Bíblia Sagrada.",
 "lang": "pt",
