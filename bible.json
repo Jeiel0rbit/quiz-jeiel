@@ -1,0 +1,696 @@
+[
+    {
+        "question": "Qual foi o primeiro milagre realizado por Jesus?",
+        "options": [
+            { "id": "A", "text": "Transformação de água em vinho" },
+            { "id": "B", "text": "Curar um leproso" },
+            { "id": "C", "text": "Alimentar os 5000" },
+            { "id": "D", "text": "Andar sobre as águas" }
+        ],
+        "answer": "A",
+        "reference": "João 2:1-11"
+    },
+    {
+        "question": "Quem escreveu o evangelho de Mateus?",
+        "options": [
+            { "id": "A", "text": "Mateus" },
+            { "id": "B", "text": "Lucas" },
+            { "id": "C", "text": "João" },
+            { "id": "D", "text": "Marcos" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 9:9"
+    },
+    {
+        "question": "Quem foi o discípulo que traiu Jesus?",
+        "options": [
+            { "id": "A", "text": "Pedro" },
+            { "id": "B", "text": "Tiago" },
+            { "id": "C", "text": "Judas" },
+            { "id": "D", "text": "Mateus" }
+        ],
+        "answer": "C",
+        "reference": "Mateus 26:14-16"
+    },
+    {
+        "question": "Quem foi o profeta que construiu uma arca para salvar sua família e os animais do dilúvio?",
+        "options": [
+            { "id": "A", "text": "Noé" },
+            { "id": "B", "text": "Moisés" },
+            { "id": "C", "text": "Abraão" },
+            { "id": "D", "text": "Josué" }
+        ],
+        "answer": "A",
+        "reference": "Gênesis 6:13-22"
+    },
+    {
+        "question": "Quem foi o profeta que enfrentou os profetas de Baal no monte Carmelo?",
+        "options": [
+            { "id": "A", "text": "Elias" },
+            { "id": "B", "text": "Eliseu" },
+            { "id": "C", "text": "Isaías" },
+            { "id": "D", "text": "Jeremias" }
+        ],
+        "answer": "A",
+        "reference": "1 Reis 18:17-40"
+    },
+    {
+        "question": "Qual dos apóstolos de Jesus era conhecido como 'o filho do trovão'?",
+        "options": [
+            { "id": "A", "text": "Pedro" },
+            { "id": "B", "text": "André" },
+            { "id": "C", "text": "Tiago" },
+            { "id": "D", "text": "Mateus" }
+        ],
+        "answer": "C",
+        "reference": "Marcos 3:17"
+    },
+    {
+        "question": "Qual era o nome da esposa de Abraão?",
+        "options": [
+            { "id": "A", "text": "Sara" },
+            { "id": "B", "text": "Rebeca" },
+            { "id": "C", "text": "Raquel" },
+            { "id": "D", "text": "Leia" }
+        ],
+        "answer": "A",
+        "reference": "Gênesis 17:15-16"
+    },
+    {
+        "question": "Quem foi o primeiro rei de Israel?",
+        "options": [
+            { "id": "A", "text": "Saul" },
+            { "id": "B", "text": "Davi" },
+            { "id": "C", "text": "Salomão" },
+            { "id": "D", "text": "Simeão" }
+        ],
+        "answer": "A",
+        "reference": "1 Samuel 10:1"
+    },
+    {
+        "question": "Qual era o nome da esposa de Isaque?",
+        "options": [
+            { "id": "A", "text": "Sara" },
+            { "id": "B", "text": "Rebeca" },
+            { "id": "C", "text": "Raquel" },
+            { "id": "D", "text": "Leia" }
+        ],
+        "answer": "B",
+        "reference": "Gênesis 24:67"
+    },
+    {
+        "question": "Quantos irmãos tinha José, o filho de Jacó?",
+        "options": [
+            { "id": "A", "text": "11" },
+            { "id": "B", "text": "10" },
+            { "id": "C", "text": "12" },
+            { "id": "D", "text": "9" }
+        ],
+        "answer": "C",
+        "reference": "Gênesis 37:2"
+    },
+    {
+        "question": "Quem escreveu a maior parte do Novo Testamento da Bíblia?",
+        "options": [
+            { "id": "A", "text": "Pedro" },
+            { "id": "B", "text": "João" },
+            { "id": "C", "text": "Paulo" },
+            { "id": "D", "text": "Tiago" }
+        ],
+        "answer": "C",
+        "reference": "Várias epístolas escritas por Paulo"
+    },
+    {
+        "question": "Qual era a profissão de Paulo antes de se tornar um apóstolo de Jesus?",
+        "options": [
+            { "id": "A", "text": "Pescador" },
+            { "id": "B", "text": "Cobrador de impostos" },
+            { "id": "C", "text": "Carpinteiro" },
+            { "id": "D", "text": "Tecelão" }
+        ],
+        "answer": "B",
+        "reference": "Atos 9:1-6"
+    },
+    {
+        "question": "Quem era o rei de Israel quando Jesus nasceu?",
+        "options": [
+            { "id": "A", "text": "Herodes" },
+            { "id": "B", "text": "Davi" },
+            { "id": "C", "text": "Salomão" },
+            { "id": "D", "text": "Pilatos" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 2:1"
+    },
+    {
+        "question": "Qual era o nome do lugar onde Jesus foi crucificado?",
+        "options": [
+            { "id": "A", "text": "Gólgota" },
+            { "id": "B", "text": "Calvário" },
+            { "id": "C", "text": "Getsemâni" },
+            { "id": "D", "text": "Jerusalém" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 27:33"
+    },
+    {
+        "question": "Qual discípulo de Jesus duvidou da ressurreição até ver Jesus pessoalmente?",
+        "options": [
+            { "id": "A", "text": "Tomé" },
+            { "id": "B", "text": "Pedro" },
+            { "id": "C", "text": "João" },
+            { "id": "D", "text": "Mateus" }
+        ],
+        "answer": "A",
+        "reference": "João 20:24-29"
+    },
+    {
+        "question": "Quem foi o profeta que enfrentou um grande peixe após tentar fugir da vontade de Deus?",
+        "options": [
+            { "id": "A", "text": "Jonas" },
+            { "id": "B", "text": "Isaías" },
+            { "id": "C", "text": "Jeremias" },
+            { "id": "D", "text": "Ezequiel" }
+        ],
+        "answer": "A",
+        "reference": "Jonas 1:17"
+    },
+    {
+        "question": "Quem era o centurião romano que reconheceu a divindade de Jesus na cruz?",
+        "options": [
+            { "id": "A", "text": "Cornélio" },
+            { "id": "B", "text": "Pôncio Pilatos" },
+            { "id": "C", "text": "Quirino" },
+            { "id": "D", "text": "Longino" }
+        ],
+        "answer": "D",
+        "reference": "Mateus 27:54"
+    },
+    {
+        "question": "Qual era a profissão de Pedro antes de seguir Jesus?",
+        "options": [
+            { "id": "A", "text": "Pescador" },
+            { "id": "B", "text": "Cobrador de impostos" },
+            { "id": "C", "text": "Carpinteiro" },
+            { "id": "D", "text": "Tecelão" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 4:18"
+    },
+    {
+        "question": "Qual foi o nome do monte onde Jesus foi tentado por Satanás após o batismo?",
+        "options": [
+            { "id": "A", "text": "Monte Sinai" },
+            { "id": "B", "text": "Monte Carmelo" },
+            { "id": "C", "text": "Monte das Oliveiras" },
+            { "id": "D", "text": "Monte das Tentação" }
+        ],
+        "answer": "D",
+        "reference": "Mateus 4:1-11"
+    },
+    {
+        "question": "Quem foi o profeta que previu o nascimento de Jesus em Belém?",
+        "options": [
+            { "id": "A", "text": "Isaías" },
+            { "id": "B", "text": "Miquéias" },
+            { "id": "C", "text": "Jeremias" },
+            { "id": "D", "text": "Ezequiel" }
+        ],
+        "answer": "B",
+        "reference": "Miquéias 5:2"
+    },
+    {
+        "question": "Quem era o fariseu que se encontrou com Jesus à noite para uma conversa?",
+        "options": [
+            { "id": "A", "text": "Nicodemos" },
+            { "id": "B", "text": "Gamaliel" },
+            { "id": "C", "text": "Saulo" },
+            { "id": "D", "text": "Cefas" }
+        ],
+        "answer": "A",
+        "reference": "João 3:1-21"
+    },
+    {
+        "question": "Qual foi o primeiro mandamento dado por Deus a Moisés no monte Sinai?",
+        "options": [
+            { "id": "A", "text": "Não terás outros deuses diante de mim" },
+            { "id": "B", "text": "Não matarás" },
+            { "id": "C", "text": "Honra teu pai e tua mãe" },
+            { "id": "D", "text": "Não furtarás" }
+        ],
+        "answer": "A",
+        "reference": "Êxodo 20:1-3"
+    },
+    {
+        "question": "Quem foi o rei que mandou matar todos os meninos de Belém com menos de dois anos na tentativa de matar Jesus?",
+        "options": [
+            { "id": "A", "text": "Herodes" },
+            { "id": "B", "text": "Pilatos" },
+            { "id": "C", "text": "César Augusto" },
+            { "id": "D", "text": "Nero" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 2:16"
+    },
+    {
+        "question": "Qual foi o último livro do Novo Testamento da Bíblia a ser escrito?",
+        "options": [
+            { "id": "A", "text": "Apocalipse" },
+            { "id": "B", "text": "1 João" },
+            { "id": "C", "text": "2 Pedro" },
+            { "id": "D", "text": "Judas" }
+        ],
+        "answer": "A",
+        "reference": "Apocalipse 1:1"
+    },
+    {
+        "question": "Quem era o sumo sacerdote que deu conselho para que Jesus fosse morto?",
+        "options": [
+            { "id": "A", "text": "Caifás" },
+            { "id": "B", "text": "Anás" },
+            { "id": "C", "text": "Caius" },
+            { "id": "D", "text": "Pôncio Pilatos" }
+        ],
+        "answer": "A",
+        "reference": "João 11:49-53"
+    },
+    {
+        "question": "Qual dos discípulos de Jesus negou conhecê-lo três vezes antes do galo cantar?",
+        "options": [
+            { "id": "A", "text": "Pedro" },
+            { "id": "B", "text": "João" },
+            { "id": "C", "text": "André" },
+            { "id": "D", "text": "Tiago" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 26:69-75"
+    },
+    {
+        "question": "Quem era o profeta que clamou 'Eis que o Cordeiro de Deus, que tira o pecado do mundo!' ao ver Jesus?",
+        "options": [
+            { "id": "A", "text": "João Batista" },
+            { "id": "B", "text": "Isaías" },
+            { "id": "C", "text": "Ezequiel" },
+            { "id": "D", "text": "Jeremias" }
+        ],
+        "answer": "A",
+        "reference": "João 1:29-34"
+    },
+    {
+        "question": "Qual foi o nome do rei que ordenou a reconstrução dos muros de Jerusalém durante o exílio?",
+        "options": [
+            { "id": "A", "text": "Artaxerxes" },
+            { "id": "B", "text": "Ciro" },
+            { "id": "C", "text": "Dario" },
+            { "id": "D", "text": "Nabucodonosor" }
+        ],
+        "answer": "A",
+        "reference": "Neemias 2:1-8"
+    },
+    {
+        "question": "Quantos anos tinha Jesus quando começou seu ministério público?",
+        "options": [
+            { "id": "A", "text": "30" },
+            { "id": "B", "text": "25" },
+            { "id": "C", "text": "35" },
+            { "id": "D", "text": "40" }
+        ],
+        "answer": "A",
+        "reference": "Lucas 3:23"
+    },
+    {
+        "question": "Qual foi o último dos dez mandamentos dados por Deus a Moisés?",
+        "options": [
+            { "id": "A", "text": "Não cobiçarás a mulher do teu próximo" },
+            { "id": "B", "text": "Não matarás" },
+            { "id": "C", "text": "Não furtarás" },
+            { "id": "D", "text": "Não darás falso testemunho" }
+        ],
+        "answer": "A",
+        "reference": "Êxodo 20:17"
+    },
+    {
+        "question": "Qual foi o nome do líder que conduziu os israelitas na conquista de Canaã após a morte de Moisés?",
+        "options": [
+            { "id": "A", "text": "Josué" },
+            { "id": "B", "text": "Calebe" },
+            { "id": "C", "text": "Gideão" },
+            { "id": "D", "text": "Jefté" }
+        ],
+        "answer": "A",
+        "reference": "Josué 1:1-9"
+    },
+    {
+        "question": "Qual foi o nome do discípulo que substituiu Judas Iscariotes após a traição?",
+        "options": [
+            { "id": "A", "text": "Matias" },
+            { "id": "B", "text": "Barnabé" },
+            { "id": "C", "text": "Silas" },
+            { "id": "D", "text": "Tadeu" }
+        ],
+        "answer": "A",
+        "reference": "Atos 1:15-26"
+    },
+    {
+        "question": "Quem foi o profeta que viu um vale cheio de ossos secos e os viu reviver?",
+        "options": [
+            { "id": "A", "text": "Ezequiel" },
+            { "id": "B", "text": "Isaías" },
+            { "id": "C", "text": "Jeremias" },
+            { "id": "D", "text": "Daniel" }
+        ],
+        "answer": "A",
+        "reference": "Ezequiel 37:1-14"
+    },
+    {
+        "question": "Quantos apóstolos Jesus tinha?",
+        "options": [
+            { "id": "A", "text": "12" },
+            { "id": "B", "text": "11" },
+            { "id": "C", "text": "10" },
+            { "id": "D", "text": "13" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 10:2-4"
+    },
+    {
+        "question": "Qual era o nome do irmão de Moisés que também era um líder no Êxodo?",
+        "options": [
+            { "id": "A", "text": "Arão" },
+            { "id": "B", "text": "Josué" },
+            { "id": "C", "text": "Caleb" },
+            { "id": "D", "text": "Miriam" }
+        ],
+        "answer": "A",
+        "reference": "Êxodo 7:1"
+    },
+    {
+        "question": "Qual era o nome da esposa de José, o pai adotivo de Jesus?",
+        "options": [
+            { "id": "A", "text": "Maria" },
+            { "id": "B", "text": "Rute" },
+            { "id": "C", "text": "Sara" },
+            { "id": "D", "text": "Esther" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 1:18-25"
+    },
+    {
+        "question": "Quem era o profeta que se escondeu debaixo de uma árvore e pediu a Deus que tirasse sua vida?",
+        "options": [
+            { "id": "A", "text": "Elias" },
+            { "id": "B", "text": "Eliseu" },
+            { "id": "C", "text": "Isaías" },
+            { "id": "D", "text": "Jeremias" }
+        ],
+        "answer": "A",
+        "reference": "1 Reis 19:3-4"
+    },
+    {
+        "question": "Qual foi o primeiro animal a ser liberado da arca de Noé após o dilúvio?",
+        "options": [
+            { "id": "A", "text": "Pomba" },
+            { "id": "B", "text": "Raven" },
+            { "id": "C", "text": "Cabra" },
+            { "id": "D", "text": "Elefante" }
+        ],
+        "answer": "B",
+        "reference": "Gênesis 8:7"
+    },
+    {
+        "question": "Qual foi o nome do pai de João Batista?",
+        "options": [
+            { "id": "A", "text": "Zacarias" },
+            { "id": "B", "text": "Simeão" },
+            { "id": "C", "text": "Isaías" },
+            { "id": "D", "text": "João" }
+        ],
+        "answer": "A",
+        "reference": "Lucas 1:5-25"
+    },
+    {
+        "question": "Quem foi o profeta que teve uma visão de uma escada que alcançava o céu?",
+        "options": [
+            { "id": "A", "text": "Jacó" },
+            { "id": "B", "text": "Isaías" },
+            { "id": "C", "text": "Ezequiel" },
+            { "id": "D", "text": "Daniel" }
+        ],
+        "answer": "A",
+        "reference": "Gênesis 28:10-19"
+    },
+    {
+        "question": "Quantas vezes Jesus foi tentado por Satanás no deserto?",
+        "options": [
+            { "id": "A", "text": "Três" },
+            { "id": "B", "text": "Quatro" },
+            { "id": "C", "text": "Cinco" },
+            { "id": "D", "text": "Uma" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 4:1-11"
+    },
+    {
+        "question": "Quem era o rei que tinha um sonho com uma estátua composta por diferentes materiais?",
+        "options": [
+            { "id": "A", "text": "Nabucodonosor" },
+            { "id": "B", "text": "Salomão" },
+            { "id": "C", "text": "Dario" },
+            { "id": "D", "text": "Ciro" }
+        ],
+        "answer": "A",
+        "reference": "Daniel 2:1-49"
+    },
+    {
+        "question": "Quantos dias e noites Jonas passou na barriga do grande peixe?",
+        "options": [
+            { "id": "A", "text": "Três" },
+            { "id": "B", "text": "Sete" },
+            { "id": "C", "text": "Quarenta" },
+            { "id": "D", "text": "Um" }
+        ],
+        "answer": "A",
+        "reference": "Jonas 1:17; 2:1"
+    },
+    {
+        "question": "Quem foi o pai de Abraão?",
+        "options": [
+            { "id": "A", "text": "Tera" },
+            { "id": "B", "text": "Nacor" },
+            { "id": "C", "text": "Harã" },
+            { "id": "D", "text": "Isaque" }
+        ],
+        "answer": "A",
+        "reference": "Gênesis 11:26-27"
+    },
+    {
+        "question": "Qual era o nome do filho mais velho de Jacó?",
+        "options": [
+            { "id": "A", "text": "Rúben" },
+            { "id": "B", "text": "Simeão" },
+            { "id": "C", "text": "Levi" },
+            { "id": "D", "text": "Judá" }
+        ],
+        "answer": "A",
+        "reference": "Gênesis 29:32"
+    },
+    {
+        "question": "Quem foi o pai de Davi, o rei de Israel?",
+        "options": [
+            { "id": "A", "text": "Jesse" },
+            { "id": "B", "text": "Saul" },
+            { "id": "C", "text": "Absalão" },
+            { "id": "D", "text": "Salomão" }
+        ],
+        "answer": "A",
+        "reference": "Rute 4:17-22"
+    },
+    {
+        "question": "Quem foi o filho de Davi que sucedeu a ele no trono de Israel?",
+        "options": [
+            { "id": "A", "text": "Salomão" },
+            { "id": "B", "text": "Absalão" },
+            { "id": "C", "text": "Adonias" },
+            { "id": "D", "text": "Joaquim" }
+        ],
+        "answer": "A",
+        "reference": "1 Reis 2:1-12"
+    },
+    {
+        "question": "Quem era o pai de José, o esposo de Maria, mãe de Jesus?",
+        "options": [
+            { "id": "A", "text": "Jacó" },
+            { "id": "B", "text": "Salomão" },
+            { "id": "C", "text": "David" },
+            { "id": "D", "text": "Matã" }
+        ],
+        "answer": "D",
+        "reference": "Mateus 1:15-16"
+    },
+    {
+        "question": "Qual era o nome do pai de João Batista?",
+        "options": [
+            { "id": "A", "text": "Zacarias" },
+            { "id": "B", "text": "Isaías" },
+            { "id": "C", "text": "Elias" },
+            { "id": "D", "text": "Nenhum, ele era filho único" }
+        ],
+        "answer": "A",
+        "reference": "Lucas 1:5-13"
+    },
+    {
+        "question": "Quem era o pai de Noé?",
+        "options": [
+            { "id": "A", "text": "Lameque" },
+            { "id": "B", "text": "Matusalém" },
+            { "id": "C", "text": "Meto-selah" },
+            { "id": "D", "text": "Enoque" }
+        ],
+        "answer": "A",
+        "reference": "Gênesis 5:28-29"
+    },
+    {
+        "question": "Quem foi o filho de Noé que o viu nu e embriagado?",
+        "options": [
+            { "id": "A", "text": "Cam" },
+            { "id": "B", "text": "Sem" },
+            { "id": "C", "text": "Jafé" },
+            { "id": "D", "text": "Canaã" }
+        ],
+        "answer": "A",
+        "reference": "Gênesis 9:20-25"
+    },
+    {
+        "question": "Qual era o nome do pai de Matusalém, o homem mais velho mencionado na Bíblia?",
+        "options": [
+            { "id": "A", "text": "Enoque" },
+            { "id": "B", "text": "Lameque" },
+            { "id": "C", "text": "Jared" },
+            { "id": "D", "text": "Meto-selah" }
+        ],
+        "answer": "A",
+        "reference": "Gênesis 5:21-22"
+    },
+    {
+        "question": "Quem foi o pai de Jacó e Esaú?",
+        "options": [
+            { "id": "A", "text": "Isaque" },
+            { "id": "B", "text": "Abraão" },
+            { "id": "C", "text": "Tera" },
+            { "id": "D", "text": "Labão" }
+        ],
+        "answer": "A",
+        "reference": "Gênesis 25:19-26"
+    },
+    {
+        "question": "Porque Deus amou o mundo?",
+        "options": [
+            { "id": "A", "text": "Deus amou o mundo de tal maneira que deu o seu Filho unigênito" },
+            { "id": "B", "text": "Deus amou o mundo e fez muitos milagres" },
+            { "id": "C", "text": "Deus amou o mundo e enviou muitos profetas" },
+            { "id": "D", "text": "Deus amou o mundo e criou todas as coisas" }
+        ],
+        "answer": "A",
+        "reference": "João 3:16"
+    },
+    {
+        "question": "O Senhor é meu pastor, nada me faltará...",
+        "options": [
+            { "id": "A", "text": "Deitar-me faz em verdes pastos, guia-me mansamente a águas tranquilas" },
+            { "id": "B", "text": "Ainda que eu ande pelo vale da sombra da morte, não temerei mal algum" },
+            { "id": "C", "text": "Preparas uma mesa perante mim na presença dos meus inimigos" },
+            { "id": "D", "text": "Certamente que a bondade e a misericórdia me seguirão todos os dias da minha vida" }
+        ],
+        "answer": "A",
+        "reference": "Salmo 23:1, 2"
+    },
+    {
+        "question": "Mas, buscai primeiro o Reino de Deus e a sua...",
+        "options": [
+            { "id": "A", "text": "Justiça" },
+            { "id": "B", "text": "Verdade" },
+            { "id": "C", "text": "Misericórdia" },
+            { "id": "D", "text": "Santidade" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 6:33"
+    },
+    {
+        "question": "Deus é...",
+        "options": [
+            { "id": "A", "text": "Amor" },
+            { "id": "B", "text": "Poderoso" },
+            { "id": "C", "text": "Sábio" },
+            { "id": "D", "text": "Justiça" }
+        ],
+        "answer": "A",
+        "reference": "1 João 4:8"
+    },
+    {
+        "question": "Na casa de meu Pai há muitas...",
+        "options": [
+            { "id": "A", "text": "Moradas" },
+            { "id": "B", "text": "Bênçãos" },
+            { "id": "C", "text": "Pessoas" },
+            { "id": "D", "text": "Milagres" }
+        ],
+        "answer": "A",
+        "reference": "João 14:2"
+    },
+    {
+        "question": "Ainda que eu falasse as línguas dos homens e dos anjos, e não tivesse...",
+        "options": [
+            { "id": "A", "text": "Amor" },
+            { "id": "B", "text": "Fé" },
+            { "id": "C", "text": "Esperança" },
+            { "id": "D", "text": "Paciência" }
+        ],
+        "answer": "A",
+        "reference": "1 Coríntios 13:1"
+    },
+    {
+        "question": "Porque o salário do pecado é a...",
+        "options": [
+            { "id": "A", "text": "Morte" },
+            { "id": "B", "text": "Pena" },
+            { "id": "C", "text": "Condenação" },
+            { "id": "D", "text": "Tristeza" }
+        ],
+        "answer": "A",
+        "reference": "Romanos 6:23"
+    },
+    {
+        "question": "Vinde a mim, todos os que estão cansados e...",
+        "options": [
+            { "id": "A", "text": "Sobrecarregados" },
+            { "id": "B", "text": "Desanimados" },
+            { "id": "C", "text": "Doentes" },
+            { "id": "D", "text": "Tristes" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 11:28"
+    },
+    {
+        "question": "Pois onde estiverem dois ou três reunidos em meu nome, aí estou...",
+        "options": [
+            { "id": "A", "text": "No meio deles" },
+            { "id": "B", "text": "A observar" },
+            { "id": "C", "text": "A orar por eles" },
+            { "id": "D", "text": "A ensinar-lhes" }
+        ],
+        "answer": "A",
+        "reference": "Mateus 18:20"
+    },
+    {
+        "question": "E conhecereis a verdade, e a verdade vos...",
+        "options": [
+            { "id": "A", "text": "Libertará" },
+            { "id": "B", "text": "Confortará" },
+            { "id": "C", "text": "Ensinará" },
+            { "id": "D", "text": "Guiará" }
+        ],
+        "answer": "A",
+        "reference": "João 8:32"
+    }
+    
+]

@@ -1,43 +1,20 @@
-const questions = [
-    {
-        question: 'Qual foi o primeiro milagre realizado por Jesus?',
-        options: [
-            { id: 'A', text: 'Transformação de água em vinho' },
-            { id: 'B', text: 'Curar um leproso' },
-            { id: 'C', text: 'Alimentar os 5000' },
-            { id: 'D', text: 'Andar sobre as águas' }
-        ],
-        answer: 'A',
-        reference: 'João 2:1-11'
-    },
-    {
-        question: 'Quem escreveu o evangelho de Mateus?',
-        options: [
-            { id: 'A', text: 'Mateus' },
-            { id: 'B', text: 'Lucas' },
-            { id: 'C', text: 'João' },
-            { id: 'D', text: 'Marcos' }
-        ],
-        answer: 'A',
-        reference: 'Mateus 9:9'
-    },
-    {
-        question: 'Quem foi o discípulo que traiu Jesus?',
-        options: [
-            { id: 'A', text: 'Pedro' },
-            { id: 'B', text: 'Tiago' },
-            { id: 'C', text: 'Judas' },
-            { id: 'D', text: 'Mateus' }
-        ],
-        answer: 'C',
-        reference: 'Mateus 26:14-16'
-    },
-    // Adicione mais perguntas conforme necessário
-];
-
+let questions = []; // Inicializa o array de perguntas vazio
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let wrongAnswers = [];
+
+// Função para carregar as perguntas do arquivo JSON
+async function loadQuestions() {
+    try {
+        const response = await fetch('bible.json'); // Faz a requisição para o arquivo JSON
+        questions = await response.json(); // Converte a resposta para JSON e atribui ao array de perguntas
+        shuffleArray(questions); // Embaralha as perguntas
+        displayQuestion(); // Exibe a primeira pergunta
+        displayQuestionNumber(); // Exibe o número da primeira pergunta
+    } catch (error) {
+        console.error('Erro ao carregar as perguntas:', error);
+    }
+}
 
 // Função para embaralhar um array
 function shuffleArray(array) {
@@ -47,9 +24,6 @@ function shuffleArray(array) {
     }
     return array;
 }
-
-// Embaralhar as perguntas antes de exibi-las
-shuffleArray(questions);
 
 function displayQuestion() {
     const randomQuestion = questions[currentQuestionIndex];
@@ -103,15 +77,30 @@ function checkAnswer() {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
+        displayQuestionNumber(); // Exibe o número da próxima pergunta
     } else {
-        const params = new URLSearchParams();
-        params.append('correctAnswers', correctAnswers);
-        params.append('totalQuestions', questions.length);
-        params.append('wrongAnswers', JSON.stringify(wrongAnswers));
-        window.location.href = `resultado.html?${params.toString()}`;
+        finishQuiz(); // Se todas as perguntas foram respondidas, chama a função para finalizar o quiz
     }
 }
 
 document.getElementById('submit-btn').addEventListener('click', checkAnswer);
 
-displayQuestion();
+// Função para exibir o número da pergunta atual
+function displayQuestionNumber() {
+    document.getElementById('question-number').textContent = `${currentQuestionIndex + 1} de ${questions.length}`;
+}
+
+// Função para finalizar o quiz e redirecionar para o resultado.html
+function finishQuiz() {
+    const params = new URLSearchParams();
+    params.append('correctAnswers', correctAnswers);
+    params.append('totalQuestions', questions.length);
+    params.append('wrongAnswers', JSON.stringify(wrongAnswers));
+    window.location.href = `resultado.html?${params.toString()}`;
+}
+
+// Adiciona evento ao botão "Finalizar"
+document.getElementById('finish-btn').addEventListener('click', finishQuiz);
+
+// Chama a função para carregar as perguntas ao carregar a página
+loadQuestions();

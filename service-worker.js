@@ -7,7 +7,10 @@ self.addEventListener('install', function(event) {
           '/script.js',
           '/style.css',
           '/manifest.json',
-          '/icon.png'
+          '/icon.png',
+          '/bible.json',
+          '/resultado.html',
+          'resultado.css'
           // Adicione outros recursos do seu aplicativo aqui
         ]);
       })

@@ -6,12 +6,15 @@
     <title>Quiz Bíblico</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
 </head>
 <body>
   <!-- Caixa -->
   <div id="caixaDialogo" class="esconder">
     <span class="fechar" onclick="fecharDialogo()">&times;</span>
-    <p>Criado por Jeiel Lima Miranda. Limpe o "cache" eventualmente para verificar atualizações. Contato: Jeiel@duck.com Tudo que precisa saber é sobre Jesus Cristo.</p>
+    <p>Criado por Jeiel Lima Miranda.</p>
+    <p>Limpe o "cache" eventualmente para verificar atualizações.</p>
+    <p>Contato: Jeiel@duck.com Tudo que precisa saber é sobre Jesus Cristo.</p>
   </div>
   <script>
     // Verificar se o diálogo já foi fechado anteriormente
@@ -39,13 +42,15 @@
   <!-- Caixa -->
   <div class="container">
     <h1>Quiz Bíblico</h1>
+    <p id="question-number"></p>
     <div id="question-container">
-      <p id="question">Carregando...</p>
-      <div id="options"></div>
-      <button id="submit-btn">Enviar</button>
+        <p id="question">Carregando...</p>
+        <div id="options"></div>
+        <button id="submit-btn">Enviar</button>
+        <button id="finish-btn">Finalizar</button>
     </div>
     <p id="result"></p>
-  </div>
+</div>
   <script src="script.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
