@@ -9,8 +9,7 @@ self.addEventListener('install', function(event) {
           '/manifest.json',
           '/icon.png',
           '/bible.json',
-          '/resultado.html',
-          'resultado.css'
+          '/resultado.html'
           // Adicione outros recursos do seu aplicativo aqui
         ]);
       })

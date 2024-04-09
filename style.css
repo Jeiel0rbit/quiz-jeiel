@@ -4,11 +4,26 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background-color: white;
+}
+
+p, h1, h2, h3 {
+    color: black;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .container {
     text-align: center;
+    background-color: black;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+#question {
+    padding: 1rem;
 }
 
 #question-container {
@@ -16,52 +31,95 @@ body, html {
 }
 
 #options {
-    margin-top: 10px;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 1rem; 
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
 }
 
 #options input[type="radio"] {
-    margin-right: 5px;
+    margin: 5px 0; /* Reduz a margem vertical entre as opções */
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    border: 2px solid black; 
+    background-color: black; 
+    cursor: pointer; 
+    transition: all 1s ease;
 }
 
-#submit-btn {
+#options input[type="radio"]:checked {
+    background-color: green;
+}
+
+#submit-btn, #finish-btn {
     margin-top: 10px;
     padding: 5px 10px;
+    border-radius: 1rem;
+    cursor: pointer; 
+    transition: background-color 1s; 
 }
 
-#result {
-    font-weight: bold;
+#submit-btn:hover {
+    background-color: grey; 
 }
+
+#finish-btn:hover {
+    background-color: red; 
+}
+
+#submit-btn:active, #finish-btn:active {
+    background-color: yellow; 
+    transition: background-color 1s; 
+}
+
+#wrongAnswersList {
+    color: white;
+    padding: 1rem;
+}
+
 /* Caixa */
-
 #caixaDialogo {
     display: none;
-    position: auto;
+    position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
+    left: 30px;
+    background-color: black;
+    border: 1px solid red;
     padding: 15px;
-    border-radius: 5px;
-    animation: aparecer 1.0s ease;
-  }
-  
-  @keyframes aparecer {
+    border-radius: 10px;
+    animation: aparecer 3.0s ease;
+}
+
+@keyframes aparecer {
     from {bottom: 0; opacity: 0;}
     to {bottom: 30px; opacity: 1;}
-  }
-  
-  .fechar {
-    color: #aaa;
+}
+
+.fechar {
+    color: red;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .fechar:hover,
-  .fechar:focus {
-    color: black;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: blue;
     text-decoration: none;
     cursor: pointer;
-  }
-  
+}
+
+/* Regras de Mídia */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+}
