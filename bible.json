@@ -527,7 +527,7 @@
 { "id": "D", "text": "Benjamim" }
 ],
 "answer": "B",
-"reference": "Gênesis 35:22-26"
+"reference": "Gênesis 49:22-26"
 },
 {
 "question": "Quem foi o filho de Davi que se tornou rei após sua morte?",
@@ -538,7 +538,7 @@
 { "id": "D", "text": "Amnon" }
 ],
 "answer": "B",
-"reference": "1 Reis 1:28-40"
+"reference": "1 Reis 1:30"
 },
 {
 "question": "Quem foi o pai de Tiago e João, apóstolos de Jesus?",
@@ -549,18 +549,18 @@
 { "id": "D", "text": "Mateus" }
 ],
 "answer": "A",
-"reference": "Mateus 4:21-22"
+"reference": "Marcos 3:17"
 },
 {
-"question": "Quem foi o pai de Tiago, o menor, que também era um dos doze apóstolos?",
+"question": "Quem foi o pai de Tiago, que também era um dos doze apóstolos?",
 "options": [
 { "id": "A", "text": "José" },
 { "id": "B", "text": "Zebedeu" },
-{ "id": "C", "text": "João" },
+{ "id": "C", "text": "Alfeu" },
 { "id": "D", "text": "Tiago, o maior" }
 ],
-"answer": "A",
-"reference": "Mateus 10:2-3"
+"answer": "C",
+"reference": "Marcos 3:18"
 },
 {
 "question": "Quem foi o pai de Judas Iscariotes, um dos doze apóstolos que traiu Jesus?",
@@ -571,6 +571,6 @@
 { "id": "D", "text": "Levi" }
 ],
 "answer": "C",
-"reference": "Lucas 6:16"
+"reference": "João 6:71"
 }
 ]
