@@ -1,26 +1,20 @@
-self.addEventListener('install', function(event) {
-    event.waitUntil(
-      caches.open('quiz-cache').then(function(cache) {
-        return cache.addAll([
-          '/',
-          '/index.html',
-          '/script.js',
-          '/style.css',
-          '/manifest.json',
-          '/icon.png',
-          '/bible.json',
-          '/resultado.html'
-          // Adicione outros recursos do seu aplicativo aqui
-        ]);
-      })
-    );
-  });
-  
-  self.addEventListener('fetch', function(event) {
-    event.respondWith(
-      caches.match(event.request).then(function(response) {
-        return response || fetch(event.request);
-      })
-    );
-  });
-  
+// Verifica se o serviço Worker está offline
+function isServiceWorkerOffline() {
+  return !navigator.onLine;
+}
+
+// Função para redirecionar para a página offline
+function redirectToOfflinePage(event) {
+  event.respondWith(
+    fetch(event.request).catch(function() {
+      return caches.match('/offline-page.html');
+    })
+  );
+}
+
+// Adiciona um ouvinte para o evento 'fetch' para interceptar as requisições de rede
+self.addEventListener('fetch', function(event) {
+  if (isServiceWorkerOffline()) {
+    redirectToOfflinePage(event);
+  }
+});
