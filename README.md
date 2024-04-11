@@ -1,6 +1,7 @@
 # quiz-jeiel
 > Holy Bible
 >Um aplicativo-web feito por: Jeiel Lima Miranda.
+https://github.com/Jetrom17/quiz-jeiel.git
 
 ### Você pode contribuir adicionando mais perguntas em "bible.json".
 
@@ -19,7 +20,5 @@ Para ajudar na **contribuição**, segue o formato:
 }
 ```
 Se também encontrar alguma pergunta que não está na Bíblia Sagrada ou não está correto suas respostas; envie para `Jeiel@duck.com` ou corrige, para que todos possam ter possibilidades de estudarem e atestarem seus conhecimentos.
-
-#
 
 > O aplicativo quando adicionado ao smartphone, não funciona no offline! Verifique sua conexão de internet.

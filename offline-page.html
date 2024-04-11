@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>README.md</title>
+  <title>Visualizador de README.md</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -69,5 +69,19 @@
 
   <!-- Biblioteca Showdown para converter Markdown para HTML -->
   <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+
+  <!-- Registro do Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(function(registration) {
+            console.log('Service Worker registrado com sucesso:', registration.scope);
+          }, function(err) {
+            console.error('Falha ao registrar o Service Worker:', err);
+          });
+      });
+    }
+  </script>
 </body>
 </html>
