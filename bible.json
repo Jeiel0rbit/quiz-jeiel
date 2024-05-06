@@ -1,53 +1,112 @@
 [
-    {
-      "question": "Qual dos discípulos negou Jesus três vezes?",
-      "answer": "Pedro",
-      "reference": "Mateus 26:69-75"
-    },
-    {
-      "question": "Quem foi o primeiro rei de Israel?",
-      "answer": "Saul",
-      "reference": "1 Samuel 10:1"
-    },
-    {
-      "question": "Quem escreveu a maior parte do Novo Testamento?",
-      "answer": "Paulo",
-      "reference": "Diversas epístolas atribuídas a Paulo"
-    },
-    {
-      "question": "Qual destes personagens foi jogado na cova dos leões?",
-      "answer": "Daniel",
-      "reference": "Daniel 6:16-23"
-    },
-    {
-      "question": "Quem foi o profeta que desafiou os profetas de Baal no Monte Carmelo?",
-      "answer": "Elias",
-      "reference": "1 Reis 18:20-40"
-    },
-    {
-      "question": "Qual é o livro mais longo da Bíblia?",
-      "answer": "Salmos",
-      "reference": "Salmos"
-    },
-    {
-      "question": "Quem foi o primeiro homem criado por Deus?",
-      "answer": "Adão",
-      "reference": "Gênesis 2:7"
-    },
-    {
-      "question": "Qual foi a cidade em que Jesus nasceu?",
-      "answer": "Belém",
-      "reference": "Mateus 2:1"
-    },
-    {
-      "question": "Quem foi o profeta que teve uma visão dos ossos secos se tornando um grande exército?",
-      "answer": "Ezequiel",
-      "reference": "Ezequiel 37:1-14"
-    },
-    {
-      "question": "Quantos livros o Novo Testamento possui?",
-      "answer": "27",
-      "reference": "Diversos livros do Novo Testamento"
-    }
-  ]
-  
+  {
+    "question": "Qual dos discípulos negou Jesus três vezes?",
+    "options": [
+      { "id": "A", "text": "Pedro" },
+      { "id": "B", "text": "João" },
+      { "id": "C", "text": "Tiago" },
+      { "id": "D", "text": "André" }
+    ],
+    "answer": "A",
+    "reference": "Mateus 26:69-75"
+  },
+  {
+    "question": "Quem foi o primeiro rei de Israel?",
+    "options": [
+      { "id": "A", "text": "Davi" },
+      { "id": "B", "text": "Saul" },
+      { "id": "C", "text": "Salomão" },
+      { "id": "D", "text": "Josué" }
+    ],
+    "answer": "B",
+    "reference": "1 Samuel 10:1"
+  },
+  {
+    "question": "Quem escreveu a maior parte do Novo Testamento?",
+    "options": [
+      { "id": "A", "text": "Pedro" },
+      { "id": "B", "text": "Paulo" },
+      { "id": "C", "text": "João" },
+      { "id": "D", "text": "Tiago" }
+    ],
+    "answer": "B",
+    "reference": "Diversas epístolas atribuídas a Paulo"
+  },
+  {
+    "question": "Qual destes personagens foi jogado na cova dos leões?",
+    "options": [
+      { "id": "A", "text": "Daniel" },
+      { "id": "B", "text": "José" },
+      { "id": "C", "text": "Moisés" },
+      { "id": "D", "text": "Elias" }
+    ],
+    "answer": "A",
+    "reference": "Daniel 6:16-23"
+  },
+  {
+    "question": "Quem foi o profeta que desafiou os profetas de Baal no Monte Carmelo?",
+    "options": [
+      { "id": "A", "text": "Isaías" },
+      { "id": "B", "text": "Elias" },
+      { "id": "C", "text": "Jeremias" },
+      { "id": "D", "text": "Ezequiel" }
+    ],
+    "answer": "B",
+    "reference": "1 Reis 18:20-40"
+  },
+  {
+    "question": "Qual é o livro mais longo da Bíblia?",
+    "options": [
+      { "id": "A", "text": "Salmos" },
+      { "id": "B", "text": "Gênesis" },
+      { "id": "C", "text": "Isaías" },
+      { "id": "D", "text": "Jeremias" }
+    ],
+    "answer": "A",
+    "reference": "Salmos"
+  },
+  {
+    "question": "Quem foi o primeiro homem criado por Deus?",
+    "options": [
+      { "id": "A", "text": "Abel" },
+      { "id": "B", "text": "Adão" },
+      { "id": "C", "text": "Noé" },
+      { "id": "D", "text": "Eva" }
+    ],
+    "answer": "B",
+    "reference": "Gênesis 2:7"
+  },
+  {
+    "question": "Qual foi a cidade em que Jesus nasceu?",
+    "options": [
+      { "id": "A", "text": "Jerusalém" },
+      { "id": "B", "text": "Belém" },
+      { "id": "C", "text": "Nazaré" },
+      { "id": "D", "text": "Betsaida" }
+    ],
+    "answer": "B",
+    "reference": "Mateus 2:1"
+  },
+  {
+    "question": "Quem foi o profeta que teve uma visão dos ossos secos se tornando um grande exército?",
+    "options": [
+      { "id": "A", "text": "Isaías" },
+      { "id": "B", "text": "Jeremias" },
+      { "id": "C", "text": "Ezequiel" },
+      { "id": "D", "text": "Daniel" }
+    ],
+    "answer": "C",
+    "reference": "Ezequiel 37:1-14"
+  },
+  {
+    "question": "Quantos livros o Novo Testamento possui?",
+    "options": [
+      { "id": "A", "text": "23" },
+      { "id": "B", "text": "27" },
+      { "id": "C", "text": "30" },
+      { "id": "D", "text": "33" }
+    ],
+    "answer": "B",
+    "reference": "Diversos livros do Novo Testamento"
+  }
+]
