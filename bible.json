@@ -1,5 +1,115 @@
 [
   {
+    "question": "Quem conduziu o povo de Israel à Terra Prometida após a morte de Moisés?",
+    "options": [
+      { "id": "A", "text": "Arão" },
+      { "id": "B", "text": "Josué" },
+      { "id": "C", "text": "Calebe" },
+      { "id": "D", "text": "Samuel" }
+    ],
+    "answer": "B",
+    "reference": "Josué 1:1-2"
+  },
+  {
+    "question": "Qual juiz de Israel fez um voto imprudente de sacrificar a primeira coisa que saísse de sua casa?",
+    "options": [
+      { "id": "A", "text": "Sansão" },
+      { "id": "B", "text": "Débora" },
+      { "id": "C", "text": "Jefté" },
+      { "id": "D", "text": "Gideão" }
+    ],
+    "answer": "C",
+    "reference": "Juízes 11:30-31"
+  },
+  {
+    "question": "Quantos dias Jonas passou no ventre do grande peixe?",
+    "options": [
+      { "id": "A", "text": "1 dia" },
+      { "id": "B", "text": "2 dias" },
+      { "id": "C", "text": "3 dias" },
+      { "id": "D", "text": "4 dias" }
+    ],
+    "answer": "C",
+    "reference": "Jonas 1:17"
+  },
+  {
+    "question": "Quem foi o rei que lançou Sadraque, Mesaque e Abede-Nego na fornalha ardente?",
+    "options": [
+      { "id": "A", "text": "Nabucodonosor" },
+      { "id": "B", "text": "Dario" },
+      { "id": "C", "text": "Ciro" },
+      { "id": "D", "text": "Artaxerxes" }
+    ],
+    "answer": "A",
+    "reference": "Daniel 3:19-20"
+  },
+  {
+    "question": "Quem foi o pai de Davi?",
+    "options": [
+      { "id": "A", "text": "Jessé" },
+      { "id": "B", "text": "Saul" },
+      { "id": "C", "text": "Obede" },
+      { "id": "D", "text": "Boaz" }
+    ],
+    "answer": "A",
+    "reference": "1 Samuel 16:1"
+  },
+  {
+    "question": "Quem interpretou o sonho de Faraó sobre as vacas gordas e magras?",
+    "options": [
+      { "id": "A", "text": "José" },
+      { "id": "B", "text": "Moisés" },
+      { "id": "C", "text": "Daniel" },
+      { "id": "D", "text": "Elias" }
+    ],
+    "answer": "A",
+    "reference": "Gênesis 41:15-16"
+  },
+  {
+    "question": "Qual foi o sinal que Deus deu a Gideão para mostrar que ele deveria salvar Israel?",
+    "options": [
+      { "id": "A", "text": "A chuva parou por três dias" },
+      { "id": "B", "text": "Um carneiro preso nos arbustos" },
+      { "id": "C", "text": "Um velo de lã molhado e seco" },
+      { "id": "D", "text": "O mar se abriu" }
+    ],
+    "answer": "C",
+    "reference": "Juízes 6:36-40"
+  },
+  {
+    "question": "Quem traiu Jesus por 30 moedas de prata?",
+    "options": [
+      { "id": "A", "text": "Pedro" },
+      { "id": "B", "text": "João" },
+      { "id": "C", "text": "Judas" },
+      { "id": "D", "text": "Tiago" }
+    ],
+    "answer": "C",
+    "reference": "Mateus 26:14-15"
+  },
+  {
+    "question": "Qual discípulo de Jesus era coletor de impostos antes de segui-lo?",
+    "options": [
+      { "id": "A", "text": "João" },
+      { "id": "B", "text": "Pedro" },
+      { "id": "C", "text": "Mateus" },
+      { "id": "D", "text": "André" }
+    ],
+    "answer": "C",
+    "reference": "Mateus 9:9"
+  },
+  {
+    "question": "Qual é o último livro da Bíblia?",
+    "options": [
+      { "id": "A", "text": "Apocalipse" },
+      { "id": "B", "text": "Judas" },
+      { "id": "C", "text": "3 João" },
+      { "id": "D", "text": "Filemom" }
+    ],
+    "answer": "A",
+    "reference": "Apocalipse"
+  },
+  {
     "question": "Qual dos discípulos negou Jesus três vezes?",
     "options": [
       { "id": "A", "text": "Pedro" },

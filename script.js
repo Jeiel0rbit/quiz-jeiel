@@ -2,6 +2,9 @@ let questions = []; // Inicializa o array de perguntas vazio
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let wrongAnswers = [];
+let quizTime; // Tempo total do quiz
+let totalQuestions; // Número de perguntas no quiz
+let timer; // Referência ao temporizador
 
 // Função para carregar as perguntas do arquivo JSON
 async function loadQuestions() {
@@ -9,8 +12,7 @@ async function loadQuestions() {
         const response = await fetch('bible.json'); // Faz a requisição para o arquivo JSON
         questions = await response.json(); // Converte a resposta para JSON e atribui ao array de perguntas
         shuffleArray(questions); // Embaralha as perguntas
-        displayQuestion(); // Exibe a primeira pergunta
-        displayQuestionNumber(); // Exibe o número da primeira pergunta
+        startQuiz(); // Inicia o quiz após carregar as perguntas
     } catch (error) {
         console.error('Erro ao carregar as perguntas:', error);
     }
@@ -23,6 +25,20 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+}
+
+function startQuiz() {
+    // Esconde a seleção de modo e mostra o questionário
+    document.getElementById('mode-selection').classList.add('hidden');
+    document.getElementById('question-container').classList.remove('hidden');
+
+    // Define as perguntas e o tempo com base no modo selecionado
+    totalQuestions = totalQuestions || questions.length;
+    quizTime = quizTime || 30; // Define um valor padrão, caso nenhum modo seja selecionado
+
+    displayQuestion(); // Exibe a primeira pergunta
+    displayQuestionNumber(); // Exibe o número da primeira pergunta
+    startTimer(); // Inicia o temporizador
 }
 
 function displayQuestion() {
@@ -71,15 +87,15 @@ function checkAnswer() {
     } else {
         const reference = currentQuestion.reference;
         wrongAnswers.push({ question: currentQuestion.question, reference: reference });
-        document.getElementById('result').textContent = `Resposta incorreta. Por favor, consulte a referência bíblica: ${reference}.`;
+        document.getElementById('result').textContent = `Resposta incorreta. Consulte a referência bíblica: ${reference}.`;
     }
 
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < totalQuestions) {
         displayQuestion();
-        displayQuestionNumber(); // Exibe o número da próxima pergunta
+        displayQuestionNumber();
     } else {
-        finishQuiz(); // Se todas as perguntas foram respondidas, chama a função para finalizar o quiz
+        finishQuiz(); // Se todas as perguntas foram respondidas
     }
 }
 
@@ -87,20 +103,47 @@ document.getElementById('submit-btn').addEventListener('click', checkAnswer);
 
 // Função para exibir o número da pergunta atual
 function displayQuestionNumber() {
-    document.getElementById('question-number').textContent = `${currentQuestionIndex + 1} de ${questions.length}`;
+    document.getElementById('question-number').textContent = `${currentQuestionIndex + 1} de ${totalQuestions}`;
 }
 
 // Função para finalizar o quiz e redirecionar para o resultado.html
 function finishQuiz() {
+    clearInterval(timer); // Para o temporizador
     const params = new URLSearchParams();
     params.append('correctAnswers', correctAnswers);
-    params.append('totalQuestions', questions.length);
+    params.append('totalQuestions', totalQuestions);
     params.append('wrongAnswers', JSON.stringify(wrongAnswers));
     window.location.href = `resultado.html?${params.toString()}`;
 }
 
-// Adiciona evento ao botão "Finalizar"
-document.getElementById('finish-btn').addEventListener('click', finishQuiz);
+// Inicia o cronômetro do quiz
+function startTimer() {
+    let timeLeft = quizTime;
+    const timerElement = document.createElement('p');
+    timerElement.id = 'timer';
+    timerElement.textContent = `Tempo restante: ${timeLeft} segundos`;
+    document.body.appendChild(timerElement);
 
-// Chama a função para carregar as perguntas ao carregar a página
-loadQuestions();
+    timer = setInterval(() => {
+        timeLeft--;
+        timerElement.textContent = `Tempo restante: ${timeLeft} segundos`;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            finishQuiz(); // Finaliza o quiz quando o tempo acaba
+        }
+    }, 1000);
+}
+
+// Função para selecionar o modo de perguntas
+document.getElementById('mode-1').addEventListener('click', function () {
+    totalQuestions = 10;
+    quizTime = 30;
+    loadQuestions();
+});
+
+document.getElementById('mode-2').addEventListener('click', function () {
+    totalQuestions = 20;
+    quizTime = 60;
+    loadQuestions();
+});
