@@ -16,11 +16,11 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@material/web@1.0.0/dist/material.min.js"></script>
     <style>
         :root {
-            --md-sys-color-primary: #2196f3;
-            --md-sys-color-secondary: #4caf50;
-            --md-sys-color-surface: #fafafa;
-            --md-sys-color-surface-container: #ffffff;
-            --md-sys-color-on-surface: #1d1b20;
+            --md-sys-color-primary: #2b5797;
+            --md-sys-color-on-primary: #ffffff;
+            --md-sys-color-surface: #fafbff;
+            --md-sys-color-surface-container: #edf0f8;
+            --md-sys-color-surface-container-highest: #e3e8f4;
         }
 
         body {
@@ -28,53 +28,55 @@
             padding: 16px;
             background-color: var(--md-sys-color-surface);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: var(--md-sys-color-on-surface);
+            color: rgb(32, 33, 36);
         }
 
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 16px;
         }
 
         h1 {
-            font-size: 2rem;
+            color: var(--md-sys-color-primary);
             text-align: center;
+            font-size: 2rem;
             margin-bottom: 24px;
-            color: var(--md-sys-color-on-surface);
         }
 
         .card {
             background-color: var(--md-sys-color-surface-container);
-            border-radius: 16px;
+            border-radius: 28px;
             padding: 24px;
             margin-bottom: 24px;
-            box-shadow: var(--md-elevation-level2);
+            box-shadow: var(--md-elevation-level1);
         }
 
         .option-button {
             width: 100%;
             margin-bottom: 12px;
-            --md-filled-button-container-color: var(--md-sys-color-surface-container);
-            --md-filled-button-label-text-color: var(--md-sys-color-on-surface);
+            --md-filled-button-container-color: var(--md-sys-color-surface-container-highest);
+            --md-filled-button-label-text-color: rgb(32, 33, 36);
         }
 
-        .option-button[selected] {
+        .mode-button {
+            margin: 8px;
             --md-filled-button-container-color: var(--md-sys-color-primary);
-            --md-filled-button-label-text-color: white;
         }
 
-        #question-number {
-            text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 16px;
-        }
-
-        #result {
-            text-align: center;
+        #question {
             font-size: 1.2rem;
-            margin-top: 16px;
-            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        md-dialog {
+            --md-dialog-container-color: var(--md-sys-color-surface);
+            border-radius: 28px;
+        }
+
+        .hidden {
+            display: none;
         }
 
         @media (min-width: 768px) {
@@ -86,55 +88,55 @@
                 font-size: 2.5rem;
             }
 
-            .card {
-                padding: 32px;
+            .container {
+                padding: 24px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Caixa de diálogo de informações -->
+    <!-- Diálogo de informações -->
     <md-dialog id="caixaDialogo">
-        <div slot="content">
-            <div style="text-align: center; padding: 16px;">
-                <p style="margin-bottom: 12px;">Criado por Jeiel Lima Miranda.</p>
-                <p style="margin-bottom: 12px;">Limpe o "cache" eventualmente para verificar atualizações.</p>
-                <p style="margin-bottom: 12px;">Contato: Jeiel@duck.com</p>
-                <p>Tudo que você precisa saber é sobre Jesus Cristo!</p>
-                <md-filled-button onclick="document.getElementById('caixaDialogo').close()">
-                    Fechar
-                </md-filled-button>
-            </div>
+        <div slot="content" style="padding: 24px;">
+            <h2 style="margin-bottom: 16px; font-size: 1.5rem;">Sobre o Quiz</h2>
+            <p style="margin-bottom: 12px;">Criado por Jeiel Lima Miranda.</p>
+            <p style="margin-bottom: 12px;">Limpe o "cache" eventualmente para verificar atualizações.</p>
+            <p style="margin-bottom: 12px;">Contato: Jeiel@duck.com</p>
+            <p style="margin-bottom: 24px;">Tudo que você precisa saber é sobre Jesus Cristo!</p>
+            <md-filled-button onclick="fecharDialogo()">Fechar</md-filled-button>
         </div>
     </md-dialog>
 
     <div class="container">
         <h1>Quiz Bíblico</h1>
 
-        <!-- Seletor de modo -->
+        <!-- Seleção de modo -->
         <div id="mode-selection" class="card">
-            <h2 style="text-align: center; font-size: 1.5rem; margin-bottom: 24px;">Escolha um modo:</h2>
+            <h2 style="text-align: center; margin-bottom: 24px; font-size: 1.3rem;">Escolha um modo:</h2>
             <div style="display: flex; flex-direction: column; gap: 16px;">
-                <md-filled-button id="mode-1">
+                <md-filled-button class="mode-button" id="mode-1">
                     10 perguntas em 30 segundos
                 </md-filled-button>
-                <md-filled-button id="mode-2">
+                <md-filled-button class="mode-button" id="mode-2">
                     20 perguntas em 60 segundos
                 </md-filled-button>
             </div>
         </div>
 
-        <p id="question-number"></p>
-        <div id="question-container" class="card" style="display: none;">
-            <p id="question" style="font-size: 1.2rem; margin-bottom: 24px; text-align: center;">Carregando...</p>
-            <div id="options" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;"></div>
-            <div style="text-align: center;">
+        <p id="question-number" style="text-align: center; font-size: 1.1rem; margin: 16px 0;"></p>
+        
+        <!-- Container de perguntas -->
+        <div id="question-container" class="card hidden">
+            <p id="question"></p>
+            <div id="options" style="display: flex; flex-direction: column; gap: 12px;"></div>
+            <div style="text-align: center; margin-top: 24px;">
                 <md-filled-button id="submit-btn">
                     Enviar
                 </md-filled-button>
             </div>
         </div>
-        <p id="result"></p>
+
+        <p id="result" style="text-align: center; font-size: 1.2rem; margin-top: 16px;"></p>
     </div>
 
     <script src="script.js"></script>
@@ -149,15 +151,15 @@
             });
         }
 
-        // Função para fechar o diálogo
+        // Funções auxiliares para diálogo
         function fecharDialogo() {
             document.getElementById('caixaDialogo').close();
         }
 
-        // Função para criar botões de opção
+        // Modificação para criar botões de opção
         function createOptionButton(text) {
             const button = document.createElement('md-filled-button');
-            button.classList.add('option-button');
+            button.className = 'option-button';
             button.textContent = text;
             return button;
         }
