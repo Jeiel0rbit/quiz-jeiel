@@ -4,17 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado do Quiz Bíblico</title>
-    <!-- TailwindCSS via CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 text-gray-900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/web@1.0.0/dist/material.min.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@material/web@1.0.0/dist/material.min.js"></script>
+    <style>
+        :root {
+            --md-sys-color-primary: #2196f3;
+            --md-sys-color-secondary: #4caf50;
+            --md-sys-color-error: #ef5350;
+            --md-sys-color-surface: #fafafa;
+            --md-sys-color-surface-container: #ffffff;
+            --md-sys-color-on-surface: #1d1b20;
+        }
 
-    <div class="container mx-auto p-6 text-center">
-        <h1 class="text-3xl font-bold mb-4">Resultado do Quiz Bíblico</h1>
-        <p class="text-lg mb-4">Você acertou <span id="correctAnswers" class="font-bold text-green-500"></span> de <span id="totalQuestions" class="font-bold text-blue-500"></span> perguntas.</p>
-        <h2 class="text-2xl font-semibold mb-4">Perguntas que você errou:</h2>
-        <ul id="wrongAnswersList" class="list-disc text-left pl-6 mb-6"></ul>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="voltar()">Voltar</button>
+        body {
+            margin: 0;
+            padding: 16px;
+            background-color: var(--md-sys-color-surface);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--md-sys-color-on-surface);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface-container);
+            border-radius: 28px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--md-elevation-level2);
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 24px;
+            color: var(--md-sys-color-on-surface);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 24px 0;
+            color: var(--md-sys-color-on-surface);
+        }
+
+        .score {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .correct-answers {
+            color: var(--md-sys-color-secondary);
+            font-weight: bold;
+        }
+
+        .total-questions {
+            color: var(--md-sys-color-primary);
+            font-weight: bold;
+        }
+
+        .wrong-answers-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrong-answer-item {
+            background-color: var(--md-sys-color-surface);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--md-sys-color-error);
+        }
+
+        .reference {
+            font-size: 0.9rem;
+            color: var(--md-sys-color-primary);
+            margin-top: 8px;
+        }
+
+        .action-container {
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .card {
+                padding: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado do Quiz Bíblico</h1>
+        
+        <div class="card">
+            <p class="score">
+                Você acertou 
+                <span id="correctAnswers" class="correct-answers"></span> 
+                de 
+                <span id="totalQuestions" class="total-questions"></span> 
+                perguntas
+            </p>
+
+            <md-divider style="margin: 24px 0;"></md-divider>
+
+            <h2>Perguntas que você errou:</h2>
+            <div id="wrongAnswersList" class="wrong-answers-list"></div>
+
+            <div class="action-container">
+                <md-filled-button onclick="voltar()">
+                    <md-icon slot="icon">arrow_back</md-icon>
+                    Voltar ao Início
+                </md-filled-button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -29,8 +148,18 @@
 
         const wrongAnswersList = document.getElementById('wrongAnswersList');
         wrongAnswers.forEach(wrongAnswer => {
-            const listItem = document.createElement('li');
-            listItem.textContent = `${wrongAnswer.question} - Referência Bíblica: ${wrongAnswer.reference}`;
+            const listItem = document.createElement('div');
+            listItem.className = 'wrong-answer-item';
+            
+            const questionText = document.createElement('div');
+            questionText.textContent = wrongAnswer.question;
+            
+            const reference = document.createElement('div');
+            reference.className = 'reference';
+            reference.textContent = `Referência Bíblica: ${wrongAnswer.reference}`;
+            
+            listItem.appendChild(questionText);
+            listItem.appendChild(reference);
             wrongAnswersList.appendChild(listItem);
         });
 
