@@ -5,57 +5,162 @@
     <meta name="google-site-verification" content="9yVeV5rWrMwQnwE57wRwDbmwXa9Zff6wvrcT5BTZFTQ" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Bíblico</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" sizes="180x180" href="icon.png" />
     <meta name="description" content="Você é bom de Bíblia Sagrada? Desafio você!" />
     <meta name="keywords" content="Jeiel Lima Miranda, bíblica, quiz, Biblia Sagrada, biblia, sagrada, quiz biblico, quiz biblica" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Jeiel Lima Miranda" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/web@1.0.0/dist/material.min.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@material/web@1.0.0/dist/material.min.js"></script>
+    <style>
+        :root {
+            --md-sys-color-primary: #2196f3;
+            --md-sys-color-secondary: #4caf50;
+            --md-sys-color-surface: #fafafa;
+            --md-sys-color-surface-container: #ffffff;
+            --md-sys-color-on-surface: #1d1b20;
+        }
+
+        body {
+            margin: 0;
+            padding: 16px;
+            background-color: var(--md-sys-color-surface);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--md-sys-color-on-surface);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 24px;
+            color: var(--md-sys-color-on-surface);
+        }
+
+        .card {
+            background-color: var(--md-sys-color-surface-container);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--md-elevation-level2);
+        }
+
+        .option-button {
+            width: 100%;
+            margin-bottom: 12px;
+            --md-filled-button-container-color: var(--md-sys-color-surface-container);
+            --md-filled-button-label-text-color: var(--md-sys-color-on-surface);
+        }
+
+        .option-button[selected] {
+            --md-filled-button-container-color: var(--md-sys-color-primary);
+            --md-filled-button-label-text-color: white;
+        }
+
+        #question-number {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 16px;
+            font-weight: bold;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .card {
+                padding: 32px;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
-  <!-- Caixa de diálogo -->
-  <div id="caixaDialogo" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-75 p-4 hidden">
-    <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm text-center">
-      <span class="absolute top-2 right-2 text-gray-600 cursor-pointer" onclick="fecharDialogo()">&times;</span>
-      <p class="mb-2">Criado por Jeiel Lima Miranda.</p>
-      <p class="mb-2">Limpe o "cache" eventualmente para verificar atualizações.</p>
-      <p class="mb-2">Contato: Jeiel@duck.com</p>
-      <p>Tudo que você precisa saber é sobre Jesus Cristo!</p>
+<body>
+    <!-- Caixa de diálogo de informações -->
+    <md-dialog id="caixaDialogo">
+        <div slot="content">
+            <div style="text-align: center; padding: 16px;">
+                <p style="margin-bottom: 12px;">Criado por Jeiel Lima Miranda.</p>
+                <p style="margin-bottom: 12px;">Limpe o "cache" eventualmente para verificar atualizações.</p>
+                <p style="margin-bottom: 12px;">Contato: Jeiel@duck.com</p>
+                <p>Tudo que você precisa saber é sobre Jesus Cristo!</p>
+                <md-filled-button onclick="document.getElementById('caixaDialogo').close()">
+                    Fechar
+                </md-filled-button>
+            </div>
+        </div>
+    </md-dialog>
+
+    <div class="container">
+        <h1>Quiz Bíblico</h1>
+
+        <!-- Seletor de modo -->
+        <div id="mode-selection" class="card">
+            <h2 style="text-align: center; font-size: 1.5rem; margin-bottom: 24px;">Escolha um modo:</h2>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <md-filled-button id="mode-1">
+                    10 perguntas em 30 segundos
+                </md-filled-button>
+                <md-filled-button id="mode-2">
+                    20 perguntas em 60 segundos
+                </md-filled-button>
+            </div>
+        </div>
+
+        <p id="question-number"></p>
+        <div id="question-container" class="card" style="display: none;">
+            <p id="question" style="font-size: 1.2rem; margin-bottom: 24px; text-align: center;">Carregando...</p>
+            <div id="options" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;"></div>
+            <div style="text-align: center;">
+                <md-filled-button id="submit-btn">
+                    Enviar
+                </md-filled-button>
+            </div>
+        </div>
+        <p id="result"></p>
     </div>
-  </div>
 
-  <!-- Seletor de modo -->
-  <div class="container mx-auto p-6 text-center">
-    <h1 class="text-3xl font-bold mb-4">Quiz Bíblico</h1>
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registrado com escopo: ', registration.scope);
+                }, function(err) {
+                    console.log('Erro ao registrar o ServiceWorker: ', err);
+                });
+            });
+        }
 
-    <!-- Novo diálogo para seleção do tempo e número de perguntas -->
-    <div id="mode-selection" class="bg-white p-6 rounded-lg shadow-lg">
-        <h2 class="text-xl font-bold mb-4">Escolha um modo:</h2>
-        <button id="mode-1" class="bg-blue-500 text-white px-4 py-2 rounded-lg mr-2">10 perguntas em 30 segundos</button>
-        <button id="mode-2" class="bg-green-500 text-white px-4 py-2 rounded-lg">20 perguntas em 60 segundos</button>
-    </div>
+        // Função para fechar o diálogo
+        function fecharDialogo() {
+            document.getElementById('caixaDialogo').close();
+        }
 
-    <p id="question-number" class="text-lg mb-2"></p>
-    <div id="question-container" class="bg-white p-6 rounded-lg shadow-lg hidden">
-        <p id="question" class="text-xl mb-4">Carregando...</p>
-        <div id="options" class="mb-4"></div>
-        <button id="submit-btn" class="bg-blue-500 text-white px-4 py-2 rounded-lg mr-2">Enviar</button>
-    </div>
-    <p id="result" class="text-lg mt-4"></p>
-  </div>
-
-  <script src="script.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-          console.log('ServiceWorker registrado com escopo: ', registration.scope);
-        }, function(err) {
-          console.log('Erro ao registrar o ServiceWorker: ', err);
-        });
-      });
-    }
-  </script>
+        // Função para criar botões de opção
+        function createOptionButton(text) {
+            const button = document.createElement('md-filled-button');
+            button.classList.add('option-button');
+            button.textContent = text;
+            return button;
+        }
+    </script>
 </body>
 </html>
