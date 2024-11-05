@@ -8,6 +8,7 @@ const urlsToCache = [
   '/resultado.html',
   '/bible.json',
   '/script.js',
+  'desktop.html'
 ];
 
 // Instalando o Service Worker

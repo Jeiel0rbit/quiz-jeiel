@@ -11,157 +11,102 @@
     <meta name="keywords" content="Jeiel Lima Miranda, bíblica, quiz, Biblia Sagrada, biblia, sagrada, quiz biblico, quiz biblica" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Jeiel Lima Miranda" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/web@1.0.0/dist/material.min.css">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@material/web@1.0.0/dist/material.min.js"></script>
-    <style>
-        :root {
-            --md-sys-color-primary: #2b5797;
-            --md-sys-color-on-primary: #ffffff;
-            --md-sys-color-surface: #fafbff;
-            --md-sys-color-surface-container: #edf0f8;
-            --md-sys-color-surface-container-highest: #e3e8f4;
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        // Função para verificar o tipo de dispositivo
+        function redirectToDesktop() {
+            if (window.innerWidth >= 768) {
+                window.location.href = 'desktop.html';
+            }
         }
 
+        window.onload = redirectToDesktop;
+    </script>
+    <style>
         body {
-            margin: 0;
-            padding: 16px;
-            background-color: var(--md-sys-color-surface);
+            background-color: #fafbff;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: rgb(32, 33, 36);
         }
 
         .container {
             max-width: 600px;
-            margin: 0 auto;
-            padding: 16px;
-        }
-
-        h1 {
-            color: var(--md-sys-color-primary);
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 24px;
-        }
-
-        .card {
-            background-color: var(--md-sys-color-surface-container);
-            border-radius: 28px;
-            padding: 24px;
-            margin-bottom: 24px;
-            box-shadow: var(--md-elevation-level1);
-        }
-
-        .option-button {
-            width: 100%;
-            margin-bottom: 12px;
-            --md-filled-button-container-color: var(--md-sys-color-surface-container-highest);
-            --md-filled-button-label-text-color: rgb(32, 33, 36);
-        }
-
-        .mode-button {
-            margin: 8px;
-            --md-filled-button-container-color: var(--md-sys-color-primary);
-        }
-
-        #question {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            margin-bottom: 24px;
-        }
-
-        md-dialog {
-            --md-dialog-container-color: var(--md-sys-color-surface);
-            border-radius: 28px;
         }
 
         .hidden {
             display: none;
         }
 
-        @media (min-width: 768px) {
-            body {
-                padding: 24px;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .container {
-                padding: 24px;
-            }
+        #caixaDialogo {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
         }
     </style>
 </head>
-<body>
+<body class="p-4">
     <!-- Diálogo de informações -->
-    <md-dialog id="caixaDialogo">
-        <div slot="content" style="padding: 24px;">
-            <h2 style="margin-bottom: 16px; font-size: 1.5rem;">Sobre o Quiz</h2>
-            <p style="margin-bottom: 12px;">Criado por Jeiel Lima Miranda.</p>
-            <p style="margin-bottom: 12px;">Limpe o "cache" eventualmente para verificar atualizações.</p>
-            <p style="margin-bottom: 12px;">Contato: Jeiel@duck.com</p>
-            <p style="margin-bottom: 24px;">Tudo que você precisa saber é sobre Jesus Cristo!</p>
-            <md-filled-button onclick="fecharDialogo()">Fechar</md-filled-button>
+    <div id="caixaDialogo" class="hidden">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold mb-2">Sobre o Quiz</h2>
+            <p class="mb-2">Criado por Jeiel Lima Miranda.</p>
+            <p class="mb-2">Quiz baseado no programa de TV "Bom de Bíblia"</p>
+            <p class="mb-2">Contato: Jeiel@duck.com</p>
+            <p class="mb-4">Você pode contribuir com mais perguntas e respostas no Github: Jetrom17/quiz-jeiel</p>
+            <button onclick="fecharDialogo()" class="bg-blue-500 text-white px-4 py-2 rounded">Fechar</button>
         </div>
-    </md-dialog>
+    </div>
 
-    <div class="container">
-        <h1>Quiz Bíblico</h1>
+    <div class="container mx-auto">
+        <h1 class="text-blue-800 text-3xl text-center mb-6">Quiz Bíblico</h1>
 
-        <!-- Seleção de modo -->
-        <div id="mode-selection" class="card">
-            <h2 style="text-align: center; margin-bottom: 24px; font-size: 1.3rem;">Escolha um modo:</h2>
-            <div style="display: flex; flex-direction: column; gap: 16px;">
-                <md-filled-button class="mode-button" id="mode-1">
-                    10 perguntas em 30 segundos
-                </md-filled-button>
-                <md-filled-button class="mode-button" id="mode-2">
-                    20 perguntas em 60 segundos
-                </md-filled-button>
-            </div>
-        </div>
-
-        <p id="question-number" style="text-align: center; font-size: 1.1rem; margin: 16px 0;"></p>
         
-        <!-- Container de perguntas -->
-        <div id="question-container" class="card hidden">
-            <p id="question"></p>
-            <div id="options" style="display: flex; flex-direction: column; gap: 12px;"></div>
-            <div style="text-align: center; margin-top: 24px;">
-                <md-filled-button id="submit-btn">
-                    Enviar
-                </md-filled-button>
+        <button id="about-btn" class="bg-gray-500 text-white px-4 py-2 rounded mt-4">
+            Sobre o Quiz
+        </button>
+
+        
+        <div id="mode-selection" class="bg-white rounded-lg shadow p-4 mt-4">
+            <h2 class="text-center text-xl mb-4">Escolha um modo:</h2>
+            <div class="flex flex-col gap-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded" id="mode-1">
+                    10 perguntas em 30 segundos
+                </button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded" id="mode-2">
+                    20 perguntas em 60 segundos
+                </button>
             </div>
         </div>
 
-        <p id="result" style="text-align: center; font-size: 1.2rem; margin-top: 16px;"></p>
+        <p id="question-number" class="text-center text-lg my-4"></p>
+        
+       
+        <div id="question-container" class="bg-white rounded-lg shadow p-4 hidden">
+            <p id="question" class="text-lg mb-4"></p>
+            <div id="options" class="flex flex-col gap-4"></div>
+            <div class="text-center mt-4">
+                <button id="submit-btn" class="bg-blue-500 text-white px-4 py-2 rounded">
+                    Enviar
+                </button>
+            </div>
+        </div>
+
+        <p id="result" class="text-center text-xl mt-4"></p>
     </div>
 
     <script src="script.js"></script>
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                    console.log('ServiceWorker registrado com escopo: ', registration.scope);
-                }, function(err) {
-                    console.log('Erro ao registrar o ServiceWorker: ', err);
-                });
-            });
-        }
+        document.getElementById('about-btn').addEventListener('click', function () {
+            document.getElementById('caixaDialogo').classList.remove('hidden');
+        });
 
-        // Funções auxiliares para diálogo
         function fecharDialogo() {
-            document.getElementById('caixaDialogo').close();
-        }
-
-        // Modificação para criar botões de opção
-        function createOptionButton(text) {
-            const button = document.createElement('md-filled-button');
-            button.className = 'option-button';
-            button.textContent = text;
-            return button;
+            document.getElementById('caixaDialogo').classList.add('hidden');
         }
     </script>
 </body>

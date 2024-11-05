@@ -1,24 +1,22 @@
-let questions = []; // Inicializa o array de perguntas vazio
+let questions = [];
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let wrongAnswers = [];
-let quizTime; // Tempo total do quiz
-let totalQuestions; // Número de perguntas no quiz
-let timer; // Referência ao temporizador
+let quizTime;
+let totalQuestions;
+let timer;
 
-// Função para carregar as perguntas do arquivo JSON
 async function loadQuestions() {
     try {
-        const response = await fetch('bible.json'); // Faz a requisição para o arquivo JSON
-        questions = await response.json(); // Converte a resposta para JSON e atribui ao array de perguntas
-        shuffleArray(questions); // Embaralha as perguntas
-        startQuiz(); // Inicia o quiz após carregar as perguntas
+        const response = await fetch('bible.json');
+        questions = await response.json();
+        shuffleArray(questions);
+        startQuiz();
     } catch (error) {
         console.error('Erro ao carregar as perguntas:', error);
     }
 }
 
-// Função para embaralhar um array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -28,17 +26,13 @@ function shuffleArray(array) {
 }
 
 function startQuiz() {
-    // Esconde a seleção de modo e mostra o questionário
     document.getElementById('mode-selection').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
-
-    // Define as perguntas e o tempo com base no modo selecionado
     totalQuestions = totalQuestions || questions.length;
-    quizTime = quizTime || 30; // Define um valor padrão, caso nenhum modo seja selecionado
-
-    displayQuestion(); // Exibe a primeira pergunta
-    displayQuestionNumber(); // Exibe o número da primeira pergunta
-    startTimer(); // Inicia o temporizador
+    quizTime = quizTime || 30;
+    displayQuestion();
+    displayQuestionNumber();
+    startTimer();
 }
 
 function displayQuestion() {
@@ -46,24 +40,27 @@ function displayQuestion() {
     document.getElementById('question').textContent = randomQuestion.question;
     
     const optionsContainer = document.getElementById('options');
-    optionsContainer.innerHTML = ''; // Limpar opções anteriores
+    optionsContainer.innerHTML = '';
     
     randomQuestion.options.forEach(option => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'flex items-center gap-2';
+        
         const radioBtn = document.createElement('input');
         radioBtn.setAttribute('type', 'radio');
         radioBtn.setAttribute('name', 'option');
         radioBtn.setAttribute('value', option.id);
         radioBtn.setAttribute('id', option.id);
+        radioBtn.className = 'form-radio h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500';
         
         const label = document.createElement('label');
         label.setAttribute('for', option.id);
         label.textContent = option.text;
+        label.className = 'text-gray-700'; 
         
-        const br = document.createElement('br');
-        
-        optionsContainer.appendChild(radioBtn);
-        optionsContainer.appendChild(label);
-        optionsContainer.appendChild(br);
+        wrapper.appendChild(radioBtn);
+        wrapper.appendChild(label);
+        optionsContainer.appendChild(wrapper);
     });
     
     document.getElementById('result').textContent = '';
@@ -95,20 +92,18 @@ function checkAnswer() {
         displayQuestion();
         displayQuestionNumber();
     } else {
-        finishQuiz(); // Se todas as perguntas foram respondidas
+        finishQuiz();
     }
 }
 
 document.getElementById('submit-btn').addEventListener('click', checkAnswer);
 
-// Função para exibir o número da pergunta atual
 function displayQuestionNumber() {
     document.getElementById('question-number').textContent = `${currentQuestionIndex + 1} de ${totalQuestions}`;
 }
 
-// Função para finalizar o quiz e redirecionar para o resultado.html
 function finishQuiz() {
-    clearInterval(timer); // Para o temporizador
+    clearInterval(timer);
     const params = new URLSearchParams();
     params.append('correctAnswers', correctAnswers);
     params.append('totalQuestions', totalQuestions);
@@ -116,7 +111,6 @@ function finishQuiz() {
     window.location.href = `resultado.html?${params.toString()}`;
 }
 
-// Inicia o cronômetro do quiz
 function startTimer() {
     let timeLeft = quizTime;
     const timerElement = document.createElement('p');
@@ -130,12 +124,11 @@ function startTimer() {
 
         if (timeLeft <= 0) {
             clearInterval(timer);
-            finishQuiz(); // Finaliza o quiz quando o tempo acaba
+            finishQuiz();
         }
     }, 1000);
 }
 
-// Função para selecionar o modo de perguntas
 document.getElementById('mode-1').addEventListener('click', function () {
     totalQuestions = 10;
     quizTime = 30;
