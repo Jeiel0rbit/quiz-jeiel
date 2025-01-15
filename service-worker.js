@@ -1,5 +1,5 @@
 // Nome do cache
-const CACHE_NAME = 'site-cache-v1';
+const CACHE_NAME = 'site-cache-v2';
 
 // Arquivos a serem armazenados no cache
 const urlsToCache = [
@@ -8,7 +8,7 @@ const urlsToCache = [
   '/resultado.html',
   '/bible.json',
   '/script.js',
-  'desktop.html'
+  '/desktop.html'
 ];
 
 // Instalando o Service Worker

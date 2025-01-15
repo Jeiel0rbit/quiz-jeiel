@@ -79,14 +79,12 @@ function checkAnswer() {
     const correctAnswer = currentQuestion.answer;
 
     if (userAnswer === correctAnswer) {
-        document.getElementById('result').textContent = 'Resposta correta!';
         correctAnswers++;
     } else {
         const reference = currentQuestion.reference;
         wrongAnswers.push({ question: currentQuestion.question, reference: reference });
-        document.getElementById('result').textContent = `Resposta incorreta. Consulte a referência bíblica: ${reference}.`;
     }
-
+    
     currentQuestionIndex++;
     if (currentQuestionIndex < totalQuestions) {
         displayQuestion();
@@ -94,7 +92,7 @@ function checkAnswer() {
     } else {
         finishQuiz();
     }
-}
+}    
 
 document.getElementById('submit-btn').addEventListener('click', checkAnswer);
 
@@ -112,21 +110,35 @@ function finishQuiz() {
 }
 
 function startTimer() {
+    const progressBarContainer = document.createElement('div');
+    progressBarContainer.className = 'fixed bottom-0 left-0 right-0 p-4';
+    
+    const progressBar = document.createElement('div');
+    progressBar.className = 'w-full bg-gray-200 rounded-full h-4';
+    
+    const progressFill = document.createElement('div');
+    progressFill.className = 'bg-blue-600 h-4 rounded-full transition-all duration-1000';
+    progressFill.style.width = '100%';
+    
+    progressBar.appendChild(progressFill);
+    progressBarContainer.appendChild(progressBar);
+    document.body.appendChild(progressBarContainer);
+
     let timeLeft = quizTime;
-    const timerElement = document.createElement('p');
-    timerElement.id = 'timer';
-    timerElement.textContent = `Tempo restante: ${timeLeft} segundos`;
-    document.body.appendChild(timerElement);
+    const interval = 100;
+    const steps = quizTime * (1000 / interval);
+    let currentStep = 0;
 
     timer = setInterval(() => {
-        timeLeft--;
-        timerElement.textContent = `Tempo restante: ${timeLeft} segundos`;
+        currentStep++;
+        const percentageLeft = ((steps - currentStep) / steps) * 100;
+        progressFill.style.width = `${percentageLeft}%`;
 
-        if (timeLeft <= 0) {
+        if (currentStep >= steps) {
             clearInterval(timer);
             finishQuiz();
         }
-    }, 1000);
+    }, interval);
 }
 
 document.getElementById('mode-1').addEventListener('click', function () {
@@ -137,6 +149,6 @@ document.getElementById('mode-1').addEventListener('click', function () {
 
 document.getElementById('mode-2').addEventListener('click', function () {
     totalQuestions = 20;
-    quizTime = 60;
+    quizTime = 120;
     loadQuestions();
 });

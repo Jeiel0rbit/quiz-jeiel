@@ -5,6 +5,7 @@
     <meta name="google-site-verification" content="9yVeV5rWrMwQnwE57wRwDbmwXa9Zff6wvrcT5BTZFTQ" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Bíblico</title>
+    <link rel="icon" href="icon.png" />
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" sizes="180x180" href="icon.png" />
     <meta name="description" content="Você é bom de Bíblia Sagrada? Desafio você!" />
@@ -54,14 +55,15 @@
     <div id="caixaDialogo" class="hidden">
         <div class="p-4">
             <h2 class="text-lg font-semibold mb-2">Sobre o Quiz</h2>
-            <p class="mb-2">Criado por Jeiel Lima Miranda.</p>
-            <p class="mb-2">Quiz baseado no programa de TV "Bom de Bíblia"</p>
-            <p class="mb-2">Contato: Jeiel@duck.com</p>
-            <p class="mb-4">Você pode contribuir com mais perguntas e respostas no Github: Jetrom17/quiz-jeiel</p>
+            <p class="mb-2" style="margin-bottom: 0.5rem;">Criado por <a href="https://jeiel.pages.dev/" style="color: #3498db; text-decoration: none;">Jeiel Lima Miranda.</a></p>
+            <p class="mb-2" style="margin-bottom: 0.5rem;">Quiz baseado no programa de TV <a href="https://www.novotempo.com/programa/bomdebiblia/" style="color: #3498db; text-decoration: none;">"Bom de Bíblia"</a>.</p>
+            <p class="mb-2" style="margin-bottom: 0.5rem;">Contato: <a href="mailto:Jeiel@duck.com" style="color: #3498db; text-decoration: none;">jeiel.lima.miranda@gmail.com</a> | Também é chave pix, caso queira fazer uma doação para o projeto.</p>
+            <p class="mb-4" style="margin-bottom: 1rem;">Você pode contribuir com mais perguntas e respostas no Github: <a href="https://github.com/Jetrom17/quiz-jeiel" style="color: #3498db; text-decoration: none;">Jetrom17/quiz-jeiel</a></p>
             <button onclick="fecharDialogo()" class="bg-blue-500 text-white px-4 py-2 rounded">Fechar</button>
         </div>
     </div>
 
+    <!-- Conteúdo principal -->
     <div class="container mx-auto">
         <h1 class="text-blue-800 text-3xl text-center mb-6">Quiz Bíblico</h1>
 
@@ -78,7 +80,7 @@
                     10 perguntas em 30 segundos
                 </button>
                 <button class="bg-blue-500 text-white px-4 py-2 rounded" id="mode-2">
-                    20 perguntas em 60 segundos
+                    20 perguntas em 2 minutos
                 </button>
             </div>
         </div>
