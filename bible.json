@@ -218,5 +218,170 @@
     ],
     "answer": "B",
     "reference": "Diversos livros do Novo Testamento"
+  },
+  {
+    "question": "Com qual arma Davi derrotou o gigante Golias?",
+    "options": [
+      { "id": "A", "text": "Espada" },
+      { "id": "B", "text": "Lança" },
+      { "id": "C", "text": "Funda e Pedra" },
+      { "id": "D", "text": "Arco e Flecha" }
+    ],
+    "answer": "C",
+    "reference": "1 Samuel 17:49-50"
+  },
+  {
+    "question": "Qual era o segredo da força de Sansão, que ele revelou a Dalila?",
+    "options": [
+      { "id": "A", "text": "Beber apenas água" },
+      { "id": "B", "text": "Orar três vezes ao dia" },
+      { "id": "C", "text": "Nunca cortar o cabelo" },
+      { "id": "D", "text": "Comer um tipo especial de pão" }
+    ],
+    "answer": "C",
+    "reference": "Juízes 16:17"
+  },
+  {
+    "question": "Qual mandamento divino proíbe fazer ídolos ou imagens para adoração?",
+    "options": [
+      { "id": "A", "text": "O primeiro" },
+      { "id": "B", "text": "O segundo" },
+      { "id": "C", "text": "O quarto" },
+      { "id": "D", "text": "O sétimo" }
+    ],
+    "answer": "B",
+    "reference": "Êxodo 20:4-6"
+  },
+  {
+    "question": "Com quantos pães e peixes Jesus alimentou a multidão de cinco mil homens (além de mulheres e crianças)?",
+    "options": [
+      { "id": "A", "text": "2 pães e 5 peixes" },
+      { "id": "B", "text": "5 pães e 2 peixes" },
+      { "id": "C", "text": "7 pães e alguns peixinhos" },
+      { "id": "D", "text": "12 pães e 1 peixe" }
+    ],
+    "answer": "B",
+    "reference": "Mateus 14:17-21"
+  },
+  {
+    "question": "Em qual estrada Saulo (que se tornou Paulo) teve um encontro com Jesus que o levou à sua conversão?",
+    "options": [
+      { "id": "A", "text": "Estrada para Jericó" },
+      { "id": "B", "text": "Estrada para Emaús" },
+      { "id": "C", "text": "Estrada para Damasco" },
+      { "id": "D", "text": "Estrada para Antioquia" }
+    ],
+    "answer": "C",
+    "reference": "Atos 9:1-3"
+  },
+  {
+    "question": "Qual rainha judia salvou seu povo da destruição planejada por Hamã na Pérsia?",
+    "options": [
+      { "id": "A", "text": "Ester" },
+      { "id": "B", "text": "Rute" },
+      { "id": "C", "text": "Jezabel" },
+      { "id": "D", "text": "Abigail" }
+    ],
+    "answer": "A",
+    "reference": "Livro de Ester (ex: Ester 7:3-4)"
+  },
+  {
+    "question": "De qual cidade Deus chamou Abrão (mais tarde Abraão) para ir a uma terra que lhe mostraria?",
+    "options": [
+      { "id": "A", "text": "Jerusalém" },
+      { "id": "B", "text": "Babilônia" },
+      { "id": "C", "text": "Ur dos Caldeus" },
+      { "id": "D", "text": "Egito" }
+    ],
+    "answer": "C",
+    "reference": "Gênesis 11:31, Gênesis 12:1"
+  },
+  {
+    "question": "No Sermão da Montanha, quem Jesus disse que 'verá a Deus'?",
+    "options": [
+      { "id": "A", "text": "Os pacificadores" },
+      { "id": "B", "text": "Os misericordiosos" },
+      { "id": "C", "text": "Os puros de coração" },
+      { "id": "D", "text": "Os que choram" }
+    ],
+    "answer": "C",
+    "reference": "Mateus 5:8"
+  },
+  {
+    "question": "Para qual nome Deus mudou o nome de Jacó depois que ele lutou com um anjo (ou Deus)?",
+    "options": [
+      { "id": "A", "text": "Israel" },
+      { "id": "B", "text": "Isaque" },
+      { "id": "C", "text": "Esaú" },
+      { "id": "D", "text": "Abraão" }
+    ],
+    "answer": "A",
+    "reference": "Gênesis 32:28"
+  },
+  {
+    "question": "Qual evento marcou o derramamento do Espírito Santo sobre os apóstolos, capacitando-os a falar em outras línguas?",
+    "options": [
+      { "id": "A", "text": "A Transfiguração" },
+      { "id": "B", "text": "O Pentecostes" },
+      { "id": "C", "text": "A Ascensão" },
+      { "id": "D", "text": "O Batismo de Jesus" }
+    ],
+    "answer": "B",
+    "reference": "Atos 2:1-4"
+  },
+  {
+    "question": "Quem foi a esposa de Isaque, mãe de Jacó e Esaú?",
+    "options": [
+      { "id": "A", "text": "Sara" },
+      { "id": "B", "text": "Rebeca" },
+      { "id": "C", "text": "Raquel" },
+      { "id": "D", "text": "Lia" }
+    ],
+    "answer": "B",
+    "reference": "Gênesis 24:67, Gênesis 25:21-26"
+  },
+  {
+    "question": "Qual profeta foi engolido por um grande peixe após tentar fugir da ordem de Deus para ir a Nínive?",
+    "options": [
+      { "id": "A", "text": "Isaías" },
+      { "id": "B", "text": "Jeremias" },
+      { "id": "C", "text": "Jonas" },
+      { "id": "D", "text": "Daniel" }
+    ],
+    "answer": "C",
+    "reference": "Jonas 1:1-17"
+  },
+  {
+    "question": "Qual foi a primeira praga enviada por Deus ao Egito?",
+    "options": [
+      { "id": "A", "text": "Rãs" },
+      { "id": "B", "text": "Moscas" },
+      { "id": "C", "text": "Água transformada em sangue" },
+      { "id": "D", "text": "Piolhos" }
+    ],
+    "answer": "C",
+    "reference": "Êxodo 7:19-21"
+  },
+  {
+    "question": "Quem foi o sucessor de Elias como profeta?",
+    "options": [
+      { "id": "A", "text": "Eliseu" },
+      { "id": "B", "text": "Isaías" },
+      { "id": "C", "text": "Natã" },
+      { "id": "D", "text": "Ageu" }
+    ],
+    "answer": "A",
+    "reference": "2 Reis 2:9-15"
+  },
+  {
+    "question": "Qual evangelho é tradicionalmente considerado o primeiro a ser escrito?",
+    "options": [
+      { "id": "A", "text": "Mateus" },
+      { "id": "B", "text": "Marcos" },
+      { "id": "C", "text": "Lucas" },
+      { "id": "D", "text": "João" }
+    ],
+    "answer": "B",
+    "reference": "Consenso acadêmico sobre a prioridade de Marcos"
   }
 ]

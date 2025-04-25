@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="9yVeV5rWrMwQnwE57wRwDbmwXa9Zff6wvrcT5BTZFTQ" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Bíblico</title>
+    <title>Quiz Bíblico Moderno</title>
     <link rel="icon" href="icon.png" />
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" sizes="180x180" href="icon.png" />
@@ -12,30 +12,87 @@
     <meta name="keywords" content="Jeiel Lima Miranda, bíblica, quiz, Biblia Sagrada, biblia, sagrada, quiz biblico, quiz biblica" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Jeiel Lima Miranda" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
-        // Função para verificar o tipo de dispositivo
         function redirectToDesktop() {
-            if (window.innerWidth >= 768) {
+            if (window.innerWidth >= 992) {
                 window.location.href = 'desktop.html';
             }
         }
-
         window.onload = redirectToDesktop;
     </script>
     <style>
         body {
-            background-color: #fafbff;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: rgb(32, 33, 36);
+            background-color: #f0f2f5;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1c1e21;
+            padding-bottom: 60px;
         }
-
-        .container {
-            max-width: 600px;
+        .quiz-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
+         .quiz-card:hover {
+             transform: translateY(-3px);
+             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+         }
+        .main-title {
+            font-weight: 700;
+            color: var(--bs-primary);
+        }
+        .btn-primary {
+             background-color: #0d6efd;
+             border-color: #0d6efd;
+             font-weight: 500;
+             padding: 0.75rem 1.25rem;
+             transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+            transform: scale(1.02);
+        }
+        .btn-secondary {
+             background-color: #6c757d;
+             border-color: #6c757d;
+             font-weight: 500;
+              padding: 0.5rem 1rem;
+             transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+         .btn-secondary:hover {
+             background-color: #5c636a;
+             border-color: #565e64;
+         }
 
-        .hidden {
-            display: none;
+        .form-check-input[type="radio"] {
+             border-color: #ced4da;
+        }
+        .form-check-input:checked {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        .form-check-label {
+            padding-left: 0.5rem;
+            cursor: pointer;
+        }
+         .form-check {
+             padding: 1rem;
+             border: 1px solid #e0e0e0;
+             border-radius: 8px;
+             transition: background-color 0.2s ease, border-color 0.2s ease;
+         }
+         .form-check:hover {
+              background-color: #f8f9fa;
+         }
+        .form-check input[type="radio"]:checked + label {
+            font-weight: 500;
+            color: var(--bs-primary);
         }
 
         #caixaDialogo {
@@ -45,77 +102,181 @@
             right: 0;
             background: white;
             border-radius: 20px 20px 0 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
+            box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.1);
+            z-index: 1055;
+            transform: translateY(100%);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        #caixaDialogo.show {
+            transform: translateY(0);
+        }
+        #dialog-backdrop {
+            z-index: 1050;
+        }
+        #progress-bar-container {
+             position: fixed;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             z-index: 1040;
+             padding: 0;
+        }
+        .progress {
+            height: 6px;
+            border-radius: 0;
+            background-color: #e9ecef;
+        }
+        .progress-bar {
+            background-color: var(--bs-primary);
+            transition: width 0.1s linear;
+        }
+        .wrong-answer-item {
+            background-color: #fff6f6;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+            border-left: 5px solid var(--bs-danger);
+        }
+        .reference {
+            font-size: 0.875rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+        .reference strong {
+            color: var(--bs-primary);
+        }
+        .score-highlight {
+            font-size: 1.5rem; /* Slightly larger score numbers */
         }
     </style>
 </head>
-<body class="p-4">
-    <!-- Diálogo de informações -->
-    <div id="caixaDialogo" class="hidden">
-        <div class="p-4">
-            <h2 class="text-lg font-semibold mb-2">Sobre o Quiz</h2>
-            <p class="mb-2" style="margin-bottom: 0.5rem;">Criado por <a href="https://jeiel.pages.dev/" style="color: #3498db; text-decoration: none;">Jeiel Lima Miranda.</a></p>
-            <p class="mb-2" style="margin-bottom: 0.5rem;">Quiz baseado no programa de TV <a href="https://www.novotempo.com/programa/bomdebiblia/" style="color: #3498db; text-decoration: none;">"Bom de Bíblia"</a>.</p>
-            <p class="mb-2" style="margin-bottom: 0.5rem;">Contato: <a href="mailto:Jeiel@duck.com" style="color: #3498db; text-decoration: none;">jeiel.lima.miranda@gmail.com</a> | Também é chave pix, caso queira fazer uma doação para o projeto.</p>
-            <p class="mb-4" style="margin-bottom: 1rem;">Você pode contribuir com mais perguntas e respostas no Github: <a href="https://github.com/Jetrom17/quiz-jeiel" style="color: #3498db; text-decoration: none;">Jetrom17/quiz-jeiel</a></p>
-            <button onclick="fecharDialogo()" class="bg-blue-500 text-white px-4 py-2 rounded">Fechar</button>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <div class="container-sm mt-4 mt-md-5 mb-4 flex-grow-1">
+        <h1 class="main-title text-center mb-4 h2">Quiz Bíblico</h1>
+
+        <div class="text-center mb-4">
+             <button id="about-btn" class="btn btn-secondary btn-sm">
+                 Sobre o Quiz
+             </button>
         </div>
-    </div>
 
-    <!-- Conteúdo principal -->
-    <div class="container mx-auto">
-        <h1 class="text-blue-800 text-3xl text-center mb-6">Quiz Bíblico</h1>
-
-        
-        <button id="about-btn" class="bg-gray-500 text-white px-4 py-2 rounded mt-4">
-            Sobre o Quiz
-        </button>
-
-        
-        <div id="mode-selection" class="bg-white rounded-lg shadow p-4 mt-4">
-            <h2 class="text-center text-xl mb-4">Escolha um modo:</h2>
-            <div class="flex flex-col gap-4">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded" id="mode-1">
-                    10 perguntas em 30 segundos
-                </button>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded" id="mode-2">
-                    20 perguntas em 2 minutos
-                </button>
+        <div id="mode-selection" class="quiz-card p-4 p-md-5">
+            <div class="text-center">
+                <h2 class="card-title fs-5 fw-medium mb-4">Escolha um modo de jogo:</h2>
+                <div class="d-grid gap-3">
+                    <button class="btn btn-primary" id="mode-1">
+                        Rápido: 10 perguntas / 30 seg
+                    </button>
+                    <button class="btn btn-primary" id="mode-2">
+                        Completo: 20 perguntas / 2 min
+                    </button>
+                </div>
             </div>
         </div>
 
-        <p id="question-number" class="text-center text-lg my-4"></p>
-        
-       
-        <div id="question-container" class="bg-white rounded-lg shadow p-4 hidden">
-            <p id="question" class="text-lg mb-4"></p>
-            <div id="options" class="flex flex-col gap-4"></div>
-            <div class="text-center mt-4">
-                <button id="submit-btn" class="bg-blue-500 text-white px-4 py-2 rounded">
-                    Enviar
-                </button>
+        <p id="question-number" class="text-center text-muted fw-medium my-4 d-none"></p>
+
+        <div id="question-view" class="quiz-card p-4 p-md-5 d-none">
+             <div>
+                <p id="question" class="fs-5 fw-medium mb-4 text-center"></p>
+                <div id="options" class="d-grid gap-3 mb-4"></div>
+                <div class="text-center mt-4">
+                    <button id="submit-btn" class="btn btn-primary w-100">
+                        Confirmar Resposta
+                    </button>
+                    <p id="selection-warning" class="text-danger mt-2 d-none small">Por favor, selecione uma opção.</p>
+                </div>
             </div>
         </div>
 
-        <p id="result" class="text-center text-xl mt-4"></p>
+        <div id="result-view" class="quiz-card p-4 p-md-5 d-none">
+             <div>
+                <h1 class="text-center mb-3 fs-4 fw-semibold">Seu Resultado</h1>
+                <p class="text-center fs-5 mb-4">
+                    Você acertou
+                    <span id="correctAnswers" class="text-success fw-bold score-highlight"></span>
+                    de
+                    <span id="totalQuestions" class="text-primary fw-bold score-highlight"></span>
+                    perguntas!
+                </p>
+
+                <hr class="my-4">
+
+                <h2 class="text-center fs-5 fw-medium mb-3">Respostas Incorretas:</h2>
+                <div id="wrongAnswersList">
+                     <p id="no-errors-message" class="text-center text-muted d-none">🎉 Parabéns! Nenhuma resposta incorreta! 🎉</p>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button id="restart-btn" class="btn btn-primary w-100">
+                        Jogar Novamente
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
+     <div id="progress-bar-container" class="d-none">
+        <div class="progress">
+            <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+        </div>
+    </div>
+
+    <div id="caixaDialogo" class="p-4 pt-5">
+         <button type="button" class="btn-close position-absolute top-0 end-0 p-3" aria-label="Close" onclick="fecharDialogo()"></button>
+        <h2 class="fs-5 fw-semibold mb-3 text-center">Sobre o Quiz Bíblico</h2>
+        <p class="mb-2 small text-muted">Criado por <a href="https://jeiel.pages.dev/" target="_blank" class="text-decoration-none fw-medium">Jeiel Lima Miranda.</a></p>
+        <p class="mb-2 small text-muted">Inspirado no programa de TV <a href="https://www.novotempo.com/programa/bomdebiblia/" target="_blank" class="text-decoration-none fw-medium">"Bom de Bíblia"</a>.</p>
+        <p class="mb-2 small text-muted">Contato: <a href="mailto:jeiel@duck.com" class="text-decoration-none fw-medium">Jeiel@duck.com</a>.</p>
+        <p class="mb-2 small text-muted">Doe via PIX (Chave: Aleatória) para apoiar o projeto: <strong>08a19869-90c3-48ae-8d8b-98d6ca58d1d8</strong></p>
+        <p class="mb-4 small text-muted">Contribua com mais perguntas no <a href="https://github.com/Jeiel0rbit/quiz-jeiel" target="_blank" class="text-decoration-none fw-medium">Github: Jeiel0rbit/quiz-jeiel</a></p>
+        <button onclick="fecharDialogo()" class="btn btn-secondary w-100 btn-sm">Fechar</button>
+    </div>
+    <div id="dialog-backdrop" class="modal-backdrop fade d-none" onclick="fecharDialogo()"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script>
+        const aboutDialog = document.getElementById('caixaDialogo');
+        const backdrop = document.getElementById('dialog-backdrop');
+
         document.getElementById('about-btn').addEventListener('click', function () {
-            document.getElementById('caixaDialogo').classList.remove('hidden');
+            backdrop.classList.remove('d-none');
+            setTimeout(() => {
+                backdrop.classList.add('show');
+                aboutDialog.classList.add('show');
+             }, 10);
         });
 
         function fecharDialogo() {
-            document.getElementById('caixaDialogo').classList.add('hidden');
+            aboutDialog.classList.remove('show');
+            backdrop.classList.remove('show');
+             setTimeout(() => {
+                 backdrop.classList.add('d-none');
+             }, 350);
         }
     </script>
-    <!-- Vercel -->
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-      </script>
-      <script defer src="/_vercel/insights/script.js"></script>
     </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('Service Worker registrado com sucesso! Escopo:', registration.scope);
+                })
+                .catch(error => {
+                    console.error('Falha ao registrar o Service Worker:', error);
+                });
+        });
+    } else {
+        console.log('Service Workers não são suportados neste navegador.');
+    }
+</script>
 </body>
 </html>
