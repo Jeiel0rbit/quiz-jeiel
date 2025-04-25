@@ -1,5 +1,5 @@
 // sw.js
-const CACHE_NAME = 'quiz-biblico-cache-v1'; // Incremente a versão se fizer mudanças significativas
+const CACHE_NAME = 'quiz-biblico-cache-v2'; // Incremente a versão se fizer mudanças significativas
 
 // Evento de Instalação: Apenas garante que o SW avance para ativação
 self.addEventListener('install', event => {
