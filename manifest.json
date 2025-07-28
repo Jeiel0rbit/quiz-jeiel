@@ -1,7 +1,7 @@
 {
 "name": "Quiz Biblico",
 "short_name": "Quiz Biblico",
-"start_url": "/index.html",
+"start_url": "https://quiz-jeiel.pages.dev/",
 "display": "standalone",
 "description": "Uma forma de você aprender mais da Bíblia Sagrada.",
 "lang": "pt",
