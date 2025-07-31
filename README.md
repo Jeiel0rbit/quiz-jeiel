@@ -30,9 +30,23 @@ Se encontrar alguma pergunta que não está na Bíblia Sagrada ou que possui res
 
 # Changelog
 
-<p>Timeline</p>
+<details>
+<summary>Clique para expandir</summary>
 
-<details> <summary>Clique para expandir</summary> <p>Versão 0.2 <br> <br> Correção na CDN de estilo, usado em `resultado` 404. <br> Corrigido o `script.js` que informava a resposta certa ou errada na última pergunta. <br> Removido tempo numérico, adicionado barra horizontal. <br> Corrigido o ícone do site.</p> 
-<summary>Versão 0.1</summary>
-<p>Upload do código.</p> 
- </details>
+### Versão 1.0
+- Mudanças de cores de azul para dourado.
+- Ajustes nos tempos compatíveis, garantindo que não haja desbalanceamento.
+- Melhorias no `sw.js` para otimizar o desempenho do PWA.
+- Atualizações gerais no PWA para uma melhor experiência do usuário.
+
+### Versão 0.2
+- Correção na CDN de estilo, usado em `resultado` 404.
+- Corrigido o `script.js` que informava a resposta certa ou errada na última pergunta.
+- Removido tempo numérico, adicionado barra horizontal.
+- Corrigido o ícone do site.
+
+### Versão 0.1
+- Upload do código.
+
+</details>
+

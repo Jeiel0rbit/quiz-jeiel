@@ -1,4 +1,4 @@
-const CACHE_NAME = 'quiz-biblico-cache-v4';
+const CACHE_NAME = 'quiz-biblico-cache-v5';
 const ASSETS = [
   '/',
   '/index.html',
