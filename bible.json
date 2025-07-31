@@ -2,89 +2,89 @@
   {
     "question": "Quem conduziu o povo de Israel à Terra Prometida após a morte de Moisés?",
     "options": [
-      { "id": "A", "text": "Arão" },
-      { "id": "B", "text": "Josué" },
-      { "id": "C", "text": "Calebe" },
+      { "id": "A", "text": "Calebe" },
+      { "id": "B", "text": "Arão" },
+      { "id": "C", "text": "Josué" },
       { "id": "D", "text": "Samuel" }
     ],
-    "answer": "B",
+    "answer": "C",
     "reference": "Josué 1:1-2"
   },
   {
     "question": "Qual juiz de Israel fez um voto imprudente de sacrificar a primeira coisa que saísse de sua casa?",
     "options": [
-      { "id": "A", "text": "Sansão" },
-      { "id": "B", "text": "Débora" },
-      { "id": "C", "text": "Jefté" },
+      { "id": "A", "text": "Débora" },
+      { "id": "B", "text": "Jefté" },
+      { "id": "C", "text": "Sansão" },
       { "id": "D", "text": "Gideão" }
     ],
-    "answer": "C",
+    "answer": "B",
     "reference": "Juízes 11:30-31"
   },
   {
     "question": "Quantos dias Jonas passou no ventre do grande peixe?",
     "options": [
-      { "id": "A", "text": "1 dia" },
-      { "id": "B", "text": "2 dias" },
-      { "id": "C", "text": "3 dias" },
-      { "id": "D", "text": "4 dias" }
+      { "id": "A", "text": "3 dias" },
+      { "id": "B", "text": "1 dia" },
+      { "id": "C", "text": "4 dias" },
+      { "id": "D", "text": "2 dias" }
     ],
-    "answer": "C",
+    "answer": "A",
     "reference": "Jonas 1:17"
   },
   {
     "question": "Quem foi o rei que lançou Sadraque, Mesaque e Abede-Nego na fornalha ardente?",
     "options": [
-      { "id": "A", "text": "Nabucodonosor" },
-      { "id": "B", "text": "Dario" },
-      { "id": "C", "text": "Ciro" },
-      { "id": "D", "text": "Artaxerxes" }
+      { "id": "A", "text": "Ciro" },
+      { "id": "B", "text": "Nabucodonosor" },
+      { "id": "C", "text": "Artaxerxes" },
+      { "id": "D", "text": "Dario" }
     ],
-    "answer": "A",
+    "answer": "B",
     "reference": "Daniel 3:19-20"
   },
   {
     "question": "Quem foi o pai de Davi?",
     "options": [
-      { "id": "A", "text": "Jessé" },
+      { "id": "A", "text": "Obede" },
       { "id": "B", "text": "Saul" },
-      { "id": "C", "text": "Obede" },
-      { "id": "D", "text": "Boaz" }
+      { "id": "C", "text": "Boaz" },
+      { "id": "D", "text": "Jessé" }
     ],
-    "answer": "A",
+    "answer": "D",
     "reference": "1 Samuel 16:1"
   },
   {
     "question": "Quem interpretou o sonho de Faraó sobre as vacas gordas e magras?",
     "options": [
-      { "id": "A", "text": "José" },
-      { "id": "B", "text": "Moisés" },
-      { "id": "C", "text": "Daniel" },
+      { "id": "A", "text": "Daniel" },
+      { "id": "B", "text": "José" },
+      { "id": "C", "text": "Moisés" },
       { "id": "D", "text": "Elias" }
     ],
-    "answer": "A",
+    "answer": "B",
     "reference": "Gênesis 41:15-16"
   },
   {
     "question": "Qual foi o sinal que Deus deu a Gideão para mostrar que ele deveria salvar Israel?",
     "options": [
       { "id": "A", "text": "A chuva parou por três dias" },
-      { "id": "B", "text": "Um carneiro preso nos arbustos" },
-      { "id": "C", "text": "Um velo de lã molhado e seco" },
-      { "id": "D", "text": "O mar se abriu" }
+      { "id": "B", "text": "Um velo de lã molhado e seco" },
+      { "id": "C", "text": "O mar se abriu" },
+      { "id": "D", "text": "Um carneiro preso nos arbustos" }
     ],
-    "answer": "C",
+    "answer": "B",
     "reference": "Juízes 6:36-40"
   },
   {
     "question": "Quem traiu Jesus por 30 moedas de prata?",
     "options": [
-      { "id": "A", "text": "Pedro" },
-      { "id": "B", "text": "João" },
-      { "id": "C", "text": "Judas" },
-      { "id": "D", "text": "Tiago" }
+      { "id": "A", "text": "Judas" },
+      { "id": "B", "text": "Pedro" },
+      { "id": "C", "text": "Tiago" },
+      { "id": "D", "text": "João" }
     ],
-    "answer": "C",
+    "answer": "A",
     "reference": "Mateus 26:14-15"
   },
   {
@@ -92,151 +92,151 @@
     "options": [
       { "id": "A", "text": "João" },
       { "id": "B", "text": "Pedro" },
-      { "id": "C", "text": "Mateus" },
-      { "id": "D", "text": "André" }
+      { "id": "C", "text": "André" },
+      { "id": "D", "text": "Mateus" }
     ],
-    "answer": "C",
+    "answer": "D",
     "reference": "Mateus 9:9"
   },
   {
     "question": "Qual é o último livro da Bíblia?",
     "options": [
-      { "id": "A", "text": "Apocalipse" },
+      { "id": "A", "text": "3 João" },
       { "id": "B", "text": "Judas" },
-      { "id": "C", "text": "3 João" },
+      { "id": "C", "text": "Apocalipse" },
       { "id": "D", "text": "Filemom" }
     ],
-    "answer": "A",
+    "answer": "C",
     "reference": "Apocalipse"
   },
   {
     "question": "Qual dos discípulos negou Jesus três vezes?",
     "options": [
-      { "id": "A", "text": "Pedro" },
-      { "id": "B", "text": "João" },
-      { "id": "C", "text": "Tiago" },
-      { "id": "D", "text": "André" }
+      { "id": "A", "text": "João" },
+      { "id": "B", "text": "Pedro" },
+      { "id": "C", "text": "André" },
+      { "id": "D", "text": "Tiago" }
     ],
-    "answer": "A",
+    "answer": "B",
     "reference": "Mateus 26:69-75"
   },
   {
     "question": "Quem foi o primeiro rei de Israel?",
     "options": [
-      { "id": "A", "text": "Davi" },
-      { "id": "B", "text": "Saul" },
-      { "id": "C", "text": "Salomão" },
-      { "id": "D", "text": "Josué" }
+      { "id": "A", "text": "Saul" },
+      { "id": "B", "text": "Josué" },
+      { "id": "C", "text": "Davi" },
+      { "id": "D", "text": "Salomão" }
     ],
-    "answer": "B",
+    "answer": "A",
     "reference": "1 Samuel 10:1"
   },
   {
     "question": "Quem escreveu a maior parte do Novo Testamento?",
     "options": [
-      { "id": "A", "text": "Pedro" },
-      { "id": "B", "text": "Paulo" },
-      { "id": "C", "text": "João" },
-      { "id": "D", "text": "Tiago" }
+      { "id": "A", "text": "Tiago" },
+      { "id": "B", "text": "João" },
+      { "id": "C", "text": "Pedro" },
+      { "id": "D", "text": "Paulo" }
     ],
-    "answer": "B",
+    "answer": "D",
     "reference": "Diversas epístolas atribuídas a Paulo"
   },
   {
     "question": "Qual destes personagens foi jogado na cova dos leões?",
     "options": [
-      { "id": "A", "text": "Daniel" },
-      { "id": "B", "text": "José" },
-      { "id": "C", "text": "Moisés" },
-      { "id": "D", "text": "Elias" }
+      { "id": "A", "text": "Moisés" },
+      { "id": "B", "text": "Elias" },
+      { "id": "C", "text": "Daniel" },
+      { "id": "D", "text": "José" }
     ],
-    "answer": "A",
+    "answer": "C",
     "reference": "Daniel 6:16-23"
   },
   {
     "question": "Quem foi o profeta que desafiou os profetas de Baal no Monte Carmelo?",
     "options": [
-      { "id": "A", "text": "Isaías" },
-      { "id": "B", "text": "Elias" },
-      { "id": "C", "text": "Jeremias" },
+      { "id": "A", "text": "Elias" },
+      { "id": "B", "text": "Jeremias" },
+      { "id": "C", "text": "Isaías" },
       { "id": "D", "text": "Ezequiel" }
     ],
-    "answer": "B",
+    "answer": "A",
     "reference": "1 Reis 18:20-40"
   },
   {
     "question": "Qual é o livro mais longo da Bíblia?",
     "options": [
-      { "id": "A", "text": "Salmos" },
-      { "id": "B", "text": "Gênesis" },
-      { "id": "C", "text": "Isaías" },
-      { "id": "D", "text": "Jeremias" }
+      { "id": "A", "text": "Jeremias" },
+      { "id": "B", "text": "Salmos" },
+      { "id": "C", "text": "Gênesis" },
+      { "id": "D", "text": "Isaías" }
     ],
-    "answer": "A",
+    "answer": "B",
     "reference": "Salmos"
   },
   {
     "question": "Quem foi o primeiro homem criado por Deus?",
     "options": [
       { "id": "A", "text": "Abel" },
-      { "id": "B", "text": "Adão" },
-      { "id": "C", "text": "Noé" },
-      { "id": "D", "text": "Eva" }
+      { "id": "B", "text": "Eva" },
+      { "id": "C", "text": "Adão" },
+      { "id": "D", "text": "Noé" }
     ],
-    "answer": "B",
+    "answer": "C",
     "reference": "Gênesis 2:7"
   },
   {
     "question": "Qual foi a cidade em que Jesus nasceu?",
     "options": [
-      { "id": "A", "text": "Jerusalém" },
-      { "id": "B", "text": "Belém" },
-      { "id": "C", "text": "Nazaré" },
+      { "id": "A", "text": "Belém" },
+      { "id": "B", "text": "Nazaré" },
+      { "id": "C", "text": "Jerusalém" },
       { "id": "D", "text": "Betsaida" }
     ],
-    "answer": "B",
+    "answer": "A",
     "reference": "Mateus 2:1"
   },
   {
     "question": "Quem foi o profeta que teve uma visão dos ossos secos se tornando um grande exército?",
     "options": [
-      { "id": "A", "text": "Isaías" },
-      { "id": "B", "text": "Jeremias" },
-      { "id": "C", "text": "Ezequiel" },
-      { "id": "D", "text": "Daniel" }
+      { "id": "A", "text": "Daniel" },
+      { "id": "B", "text": "Ezequiel" },
+      { "id": "C", "text": "Jeremias" },
+      { "id": "D", "text": "Isaías" }
     ],
-    "answer": "C",
+    "answer": "B",
     "reference": "Ezequiel 37:1-14"
   },
   {
     "question": "Quantos livros o Novo Testamento possui?",
     "options": [
-      { "id": "A", "text": "23" },
-      { "id": "B", "text": "27" },
-      { "id": "C", "text": "30" },
-      { "id": "D", "text": "33" }
+      { "id": "A", "text": "30" },
+      { "id": "B", "text": "23" },
+      { "id": "C", "text": "33" },
+      { "id": "D", "text": "27" }
     ],
-    "answer": "B",
+    "answer": "D",
     "reference": "Diversos livros do Novo Testamento"
   },
   {
     "question": "Com qual arma Davi derrotou o gigante Golias?",
     "options": [
-      { "id": "A", "text": "Espada" },
-      { "id": "B", "text": "Lança" },
-      { "id": "C", "text": "Funda e Pedra" },
+      { "id": "A", "text": "Lança" },
+      { "id": "B", "text": "Funda e Pedra" },
+      { "id": "C", "text": "Espada" },
       { "id": "D", "text": "Arco e Flecha" }
     ],
-    "answer": "C",
+    "answer": "B",
     "reference": "1 Samuel 17:49-50"
   },
   {
     "question": "Qual era o segredo da força de Sansão, que ele revelou a Dalila?",
     "options": [
-      { "id": "A", "text": "Beber apenas água" },
-      { "id": "B", "text": "Orar três vezes ao dia" },
+      { "id": "A", "text": "Orar três vezes ao dia" },
+      { "id": "B", "text": "Comer um tipo especial de pão" },
       { "id": "C", "text": "Nunca cortar o cabelo" },
-      { "id": "D", "text": "Comer um tipo especial de pão" }
+      { "id": "D", "text": "Beber apenas água" }
     ],
     "answer": "C",
     "reference": "Juízes 16:17"
@@ -245,20 +245,20 @@
     "question": "Qual mandamento divino proíbe fazer ídolos ou imagens para adoração?",
     "options": [
       { "id": "A", "text": "O primeiro" },
-      { "id": "B", "text": "O segundo" },
-      { "id": "C", "text": "O quarto" },
-      { "id": "D", "text": "O sétimo" }
+      { "id": "B", "text": "O sétimo" },
+      { "id": "C", "text": "O segundo" },
+      { "id": "D", "text": "O quarto" }
     ],
-    "answer": "B",
+    "answer": "C",
     "reference": "Êxodo 20:4-6"
   },
   {
     "question": "Com quantos pães e peixes Jesus alimentou a multidão de cinco mil homens (além de mulheres e crianças)?",
     "options": [
-      { "id": "A", "text": "2 pães e 5 peixes" },
+      { "id": "A", "text": "7 pães e alguns peixinhos" },
       { "id": "B", "text": "5 pães e 2 peixes" },
-      { "id": "C", "text": "7 pães e alguns peixinhos" },
-      { "id": "D", "text": "12 pães e 1 peixe" }
+      { "id": "C", "text": "12 pães e 1 peixe" },
+      { "id": "D", "text": "2 pães e 5 peixes" }
     ],
     "answer": "B",
     "reference": "Mateus 14:17-21"
@@ -267,31 +267,31 @@
     "question": "Em qual estrada Saulo (que se tornou Paulo) teve um encontro com Jesus que o levou à sua conversão?",
     "options": [
       { "id": "A", "text": "Estrada para Jericó" },
-      { "id": "B", "text": "Estrada para Emaús" },
-      { "id": "C", "text": "Estrada para Damasco" },
-      { "id": "D", "text": "Estrada para Antioquia" }
+      { "id": "B", "text": "Estrada para Antioquia" },
+      { "id": "C", "text": "Estrada para Emaús" },
+      { "id": "D", "text": "Estrada para Damasco" }
     ],
-    "answer": "C",
+    "answer": "D",
     "reference": "Atos 9:1-3"
   },
   {
     "question": "Qual rainha judia salvou seu povo da destruição planejada por Hamã na Pérsia?",
     "options": [
-      { "id": "A", "text": "Ester" },
-      { "id": "B", "text": "Rute" },
-      { "id": "C", "text": "Jezabel" },
-      { "id": "D", "text": "Abigail" }
+      { "id": "A", "text": "Jezabel" },
+      { "id": "B", "text": "Ester" },
+      { "id": "C", "text": "Abigail" },
+      { "id": "D", "text": "Rute" }
     ],
-    "answer": "A",
+    "answer": "B",
     "reference": "Livro de Ester (ex: Ester 7:3-4)"
   },
   {
     "question": "De qual cidade Deus chamou Abrão (mais tarde Abraão) para ir a uma terra que lhe mostraria?",
     "options": [
-      { "id": "A", "text": "Jerusalém" },
-      { "id": "B", "text": "Babilônia" },
+      { "id": "A", "text": "Babilônia" },
+      { "id": "B", "text": "Egito" },
       { "id": "C", "text": "Ur dos Caldeus" },
-      { "id": "D", "text": "Egito" }
+      { "id": "D", "text": "Jerusalém" }
     ],
     "answer": "C",
     "reference": "Gênesis 11:31, Gênesis 12:1"
@@ -299,21 +299,21 @@
   {
     "question": "No Sermão da Montanha, quem Jesus disse que 'verá a Deus'?",
     "options": [
-      { "id": "A", "text": "Os pacificadores" },
-      { "id": "B", "text": "Os misericordiosos" },
-      { "id": "C", "text": "Os puros de coração" },
-      { "id": "D", "text": "Os que choram" }
+      { "id": "A", "text": "Os misericordiosos" },
+      { "id": "B", "text": "Os puros de coração" },
+      { "id": "C", "text": "Os que choram" },
+      { "id": "D", "text": "Os pacificadores" }
     ],
-    "answer": "C",
+    "answer": "B",
     "reference": "Mateus 5:8"
   },
   {
     "question": "Para qual nome Deus mudou o nome de Jacó depois que ele lutou com um anjo (ou Deus)?",
     "options": [
       { "id": "A", "text": "Israel" },
-      { "id": "B", "text": "Isaque" },
-      { "id": "C", "text": "Esaú" },
-      { "id": "D", "text": "Abraão" }
+      { "id": "B", "text": "Esaú" },
+      { "id": "C", "text": "Abraão" },
+      { "id": "D", "text": "Isaque" }
     ],
     "answer": "A",
     "reference": "Gênesis 32:28"
@@ -321,10 +321,10 @@
   {
     "question": "Qual evento marcou o derramamento do Espírito Santo sobre os apóstolos, capacitando-os a falar em outras línguas?",
     "options": [
-      { "id": "A", "text": "A Transfiguração" },
+      { "id": "A", "text": "A Ascensão" },
       { "id": "B", "text": "O Pentecostes" },
-      { "id": "C", "text": "A Ascensão" },
-      { "id": "D", "text": "O Batismo de Jesus" }
+      { "id": "C", "text": "O Batismo de Jesus" },
+      { "id": "D", "text": "A Transfiguração" }
     ],
     "answer": "B",
     "reference": "Atos 2:1-4"
@@ -332,32 +332,32 @@
   {
     "question": "Quem foi a esposa de Isaque, mãe de Jacó e Esaú?",
     "options": [
-      { "id": "A", "text": "Sara" },
-      { "id": "B", "text": "Rebeca" },
-      { "id": "C", "text": "Raquel" },
-      { "id": "D", "text": "Lia" }
+      { "id": "A", "text": "Raquel" },
+      { "id": "B", "text": "Lia" },
+      { "id": "C", "text": "Rebeca" },
+      { "id": "D", "text": "Sara" }
     ],
-    "answer": "B",
+    "answer": "C",
     "reference": "Gênesis 24:67, Gênesis 25:21-26"
   },
   {
     "question": "Qual profeta foi engolido por um grande peixe após tentar fugir da ordem de Deus para ir a Nínive?",
     "options": [
       { "id": "A", "text": "Isaías" },
-      { "id": "B", "text": "Jeremias" },
-      { "id": "C", "text": "Jonas" },
-      { "id": "D", "text": "Daniel" }
+      { "id": "B", "text": "Jonas" },
+      { "id": "C", "text": "Daniel" },
+      { "id": "D", "text": "Jeremias" }
     ],
-    "answer": "C",
+    "answer": "B",
     "reference": "Jonas 1:1-17"
   },
   {
     "question": "Qual foi a primeira praga enviada por Deus ao Egito?",
     "options": [
-      { "id": "A", "text": "Rãs" },
+      { "id": "A", "text": "Piolhos" },
       { "id": "B", "text": "Moscas" },
       { "id": "C", "text": "Água transformada em sangue" },
-      { "id": "D", "text": "Piolhos" }
+      { "id": "D", "text": "Rãs" }
     ],
     "answer": "C",
     "reference": "Êxodo 7:19-21"
@@ -365,21 +365,21 @@
   {
     "question": "Quem foi o sucessor de Elias como profeta?",
     "options": [
-      { "id": "A", "text": "Eliseu" },
-      { "id": "B", "text": "Isaías" },
-      { "id": "C", "text": "Natã" },
-      { "id": "D", "text": "Ageu" }
+      { "id": "A", "text": "Ageu" },
+      { "id": "B", "text": "Natã" },
+      { "id": "C", "text": "Eliseu" },
+      { "id": "D", "text": "Isaías" }
     ],
-    "answer": "A",
+    "answer": "C",
     "reference": "2 Reis 2:9-15"
   },
   {
     "question": "Qual evangelho é tradicionalmente considerado o primeiro a ser escrito?",
     "options": [
-      { "id": "A", "text": "Mateus" },
+      { "id": "A", "text": "Lucas" },
       { "id": "B", "text": "Marcos" },
-      { "id": "C", "text": "Lucas" },
-      { "id": "D", "text": "João" }
+      { "id": "C", "text": "João" },
+      { "id": "D", "text": "Mateus" }
     ],
     "answer": "B",
     "reference": "Consenso acadêmico sobre a prioridade de Marcos"

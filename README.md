@@ -25,7 +25,7 @@ Para ajudar na contribuição, siga o formato abaixo:
 
 Se encontrar alguma pergunta que não está na Bíblia Sagrada ou que possui respostas incorretas, envie um e-mail para jeiel.lima.miranda@gmail.com ou faça uma correção diretamente no repositório. Assim, todos podem estudar e testar seus conhecimentos de forma precisa.
 
-> ![NOTE]
+> [!NOTE]
 > É possível que não funcione corretamete no modo offline, por isso, deve-se verificar sua conexão.
 
 # Changelog
