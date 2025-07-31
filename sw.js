@@ -1,37 +1,39 @@
-// sw.js
-const CACHE_NAME = 'quiz-biblico-cache-v2'; // Incremente a versão se fizer mudanças significativas
+const CACHE_NAME = 'quiz-biblico-cache-v3';
+const ASSETS = [
+  '/',
+  '/index.html',
+  '/script.js',
+  '/bible.json',
+  '/icon.png',
+  '/manifest.json',
+  '/sitemap.xml',
+  '/robots.txt',
+  // Adicione outros arquivos estáticos se necessário
+];
 
-// Evento de Instalação: Apenas garante que o SW avance para ativação
+// Instalação: pré-cache dos arquivos essenciais
 self.addEventListener('install', event => {
-  console.log('[Service Worker] Instalando...');
-  // Força o SW a pular a fase de espera e ativar imediatamente
-  event.waitUntil(self.skipWaiting());
-});
-
-// Evento de Ativação: Limpa caches antigos
-self.addEventListener('activate', event => {
-  console.log('[Service Worker] Ativando...');
+  console.log('[SW] Instalando e cacheando assets essenciais...');
   event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cacheName => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('[Service Worker] Deletando cache antigo:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    }).then(() => {
-      console.log('[Service Worker] Cache antigo limpo. Pronto para controlar clientes!');
-      // Garante que o SW ativo controle as páginas abertas imediatamente
-      return self.clients.claim();
-    })
+    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))
+      .then(() => self.skipWaiting())
   );
 });
 
-// Evento Fetch: Tenta a rede primeiro, se falhar, tenta o cache. Cacheia respostas bem-sucedidas da rede.
+// Ativação: limpa caches antigos e ativa imediatamente
+self.addEventListener('activate', event => {
+  console.log('[SW] Ativando e limpando caches antigos...');
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(
+        keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
+      )
+    ).then(() => self.clients.claim())
+  );
+});
+
+// Busca: responde do cache, tenta rede e atualiza cache, fallback offline
 self.addEventListener('fetch', event => {
-  // Ignora requisições não-GET e de extensões/vercel
   if (event.request.method !== 'GET' ||
       event.request.url.startsWith('chrome-extension://') ||
       event.request.url.includes('/_vercel/insights/')) {
@@ -39,37 +41,33 @@ self.addEventListener('fetch', event => {
   }
 
   event.respondWith(
-    fetch(event.request)
-      .then(networkResponse => {
-        // Verifica se recebemos uma resposta válida da rede
-        if (networkResponse && networkResponse.status === 200) {
-          // Clona a resposta - precisamos de uma cópia para o cache e outra para o navegador
-          const responseToCache = networkResponse.clone();
-          // Abre o cache e armazena a resposta da rede
-          caches.open(CACHE_NAME)
-            .then(cache => {
-              cache.put(event.request, responseToCache);
+    caches.match(event.request).then(cachedResponse => {
+      const fetchPromise = fetch(event.request)
+        .then(networkResponse => {
+          if (networkResponse && networkResponse.status === 200) {
+            caches.open(CACHE_NAME).then(cache => {
+              cache.put(event.request, networkResponse.clone());
             });
-        }
-        // Retorna a resposta original da rede para o navegador
-        return networkResponse;
-      })
-      .catch(error => {
-        // A rede falhou (offline ou erro) - tenta buscar no cache
-        console.log('[Service Worker] Rede falhou, tentando o cache para:', event.request.url);
-        return caches.match(event.request)
-          .then(cachedResponse => {
-            if (cachedResponse) {
-              // Encontrou no cache, retorna a resposta cacheada
-              return cachedResponse;
-            }
-            // Não encontrou na rede nem no cache.
-            // Opcional: Retornar uma página offline padrão aqui
-            // return caches.match('/offline.html');
-            console.error('[Service Worker] Recurso não encontrado na rede nem no cache:', event.request.url);
-            // Retorna undefined para deixar o navegador lidar com o erro padrão
-            return undefined;
-          });
-      })
+          }
+          return networkResponse;
+        })
+        .catch(() => {
+          // Se offline e não tem no cache, tenta fallback
+          if (event.request.destination === 'document') {
+            return caches.match('/index.html');
+          }
+          return cachedResponse;
+        });
+
+      // Retorna do cache imediatamente, atualiza em background
+      return cachedResponse || fetchPromise;
+    })
   );
+});
+
+// Mensagem: força atualização do SW quando receber 'SKIP_WAITING'
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
